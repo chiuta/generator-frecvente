@@ -51,7 +51,7 @@
 <style>
   :root {
     --bg-deep: #07090a; --bg-panel: #0e1414; --bg-bezel: #161e1e; --bg-inset: #0a1010;
-    --line: #1f2a2a; --line-soft: #15201f; --txt: #c8d5cc; --txt-dim: #6f8077; --txt-faint: #3d4a45;
+    --line: #1f2a2a; --line-soft: #15201f; --txt: #c8d5cc; --txt-dim: #7a8c82; --txt-faint: #3d4a45;
     --phosphor: #7eff95; --phosphor-glow: #7eff9544;
     --amber: #ffb84d; --amber-glow: #ffb84d44;
     --red: #ff5e6c; --red-glow: #ff5e6c66;
@@ -328,7 +328,7 @@
     border-radius: 4px; margin-bottom: 14px; box-shadow: var(--shadow-inset);
   }
   .status-bar .stat { display: flex; gap: 8px; align-items: baseline; }
-  .status-bar .lbl { color: var(--txt-faint); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace; }
+  .status-bar .lbl { color: var(--txt-dim); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace; }
   .status-bar .val { color: var(--phosphor); text-shadow: 0 0 4px var(--phosphor-glow); }
   .status-bar .val.amber { color: var(--amber); text-shadow: 0 0 4px var(--amber-glow); }
   .status-bar .val.red { color: var(--red); text-shadow: 0 0 4px var(--red-glow); }
@@ -1654,7 +1654,7 @@
 #tf-superseded .tf-cb:checked ~ .tf-note{display:none}
 @media print{#tf-superseded{display:none}}
 </style>
-<input type="checkbox" id="tf-superseded-cb" class="tf-cb" aria-hidden="true">
+<input type="checkbox" id="tf-superseded-cb" class="tf-cb" tabindex="-1">
 <div class="tf-note">
 <span>Acest instrument are o versiune mai nouă și mai completă: <b>FrequencyLaboratory</b> (în același portofoliu).</span>
 <label for="tf-superseded-cb" class="tf-x" title="Închide" aria-label="Închide">✕</label>
@@ -2251,11 +2251,11 @@
 
     <div class="ctrl"><label class="toggle"><input type="checkbox" id="eqOn"><span class="toggle-track"></span><span class="toggle-label">EQ 5-band</span></label></div>
     <div class="small-row-4" style="grid-template-columns: repeat(5, 1fr);">
-      <div class="ctrl"><div class="ctrl-label" style="font-size:9px;"><span>80Hz</span></div><input type="range" id="eq1" min="-18" max="18" step="0.5" value="0" style="-webkit-appearance:slider-vertical; writing-mode:bt-lr; height:80px; width:20px;"></div>
-      <div class="ctrl"><div class="ctrl-label" style="font-size:9px;"><span>250</span></div><input type="range" id="eq2" min="-18" max="18" step="0.5" value="0" style="-webkit-appearance:slider-vertical; writing-mode:bt-lr; height:80px; width:20px;"></div>
-      <div class="ctrl"><div class="ctrl-label" style="font-size:9px;"><span>1k</span></div><input type="range" id="eq3" min="-18" max="18" step="0.5" value="0" style="-webkit-appearance:slider-vertical; writing-mode:bt-lr; height:80px; width:20px;"></div>
-      <div class="ctrl"><div class="ctrl-label" style="font-size:9px;"><span>4k</span></div><input type="range" id="eq4" min="-18" max="18" step="0.5" value="0" style="-webkit-appearance:slider-vertical; writing-mode:bt-lr; height:80px; width:20px;"></div>
-      <div class="ctrl"><div class="ctrl-label" style="font-size:9px;"><span>12k</span></div><input type="range" id="eq5" min="-18" max="18" step="0.5" value="0" style="-webkit-appearance:slider-vertical; writing-mode:bt-lr; height:80px; width:20px;"></div>
+      <div class="ctrl"><div class="ctrl-label" style="font-size:9px;"><span>80Hz</span></div><input type="range" id="eq1" aria-label="EQ 80 Hz" min="-18" max="18" step="0.5" value="0" style="-webkit-appearance:slider-vertical; writing-mode:bt-lr; height:80px; width:20px;"></div>
+      <div class="ctrl"><div class="ctrl-label" style="font-size:9px;"><span>250</span></div><input type="range" id="eq2" aria-label="EQ 250 Hz" min="-18" max="18" step="0.5" value="0" style="-webkit-appearance:slider-vertical; writing-mode:bt-lr; height:80px; width:20px;"></div>
+      <div class="ctrl"><div class="ctrl-label" style="font-size:9px;"><span>1k</span></div><input type="range" id="eq3" aria-label="EQ 1 kHz" min="-18" max="18" step="0.5" value="0" style="-webkit-appearance:slider-vertical; writing-mode:bt-lr; height:80px; width:20px;"></div>
+      <div class="ctrl"><div class="ctrl-label" style="font-size:9px;"><span>4k</span></div><input type="range" id="eq4" aria-label="EQ 4 kHz" min="-18" max="18" step="0.5" value="0" style="-webkit-appearance:slider-vertical; writing-mode:bt-lr; height:80px; width:20px;"></div>
+      <div class="ctrl"><div class="ctrl-label" style="font-size:9px;"><span>12k</span></div><input type="range" id="eq5" aria-label="EQ 12 kHz" min="-18" max="18" step="0.5" value="0" style="-webkit-appearance:slider-vertical; writing-mode:bt-lr; height:80px; width:20px;"></div>
     </div>
 
     <hr class="divider">
@@ -2421,27 +2421,27 @@
     </div>
     <div class="nature-row">
       <div class="nm-lbl">ploaie</div>
-      <input type="range" id="natRain" min="0" max="100" step="1" value="0">
+      <input type="range" id="natRain" aria-label="Ambient: ploaie" min="0" max="100" step="1" value="0">
       <div class="nm-val" id="lblNatRain">0%</div>
     </div>
     <div class="nature-row">
       <div class="nm-lbl">ocean</div>
-      <input type="range" id="natOcean" min="0" max="100" step="1" value="0">
+      <input type="range" id="natOcean" aria-label="Ambient: ocean" min="0" max="100" step="1" value="0">
       <div class="nm-val" id="lblNatOcean">0%</div>
     </div>
     <div class="nature-row">
       <div class="nm-lbl">vânt</div>
-      <input type="range" id="natWind" min="0" max="100" step="1" value="0">
+      <input type="range" id="natWind" aria-label="Ambient: vânt" min="0" max="100" step="1" value="0">
       <div class="nm-val" id="lblNatWind">0%</div>
     </div>
     <div class="nature-row">
       <div class="nm-lbl">foc</div>
-      <input type="range" id="natFire" min="0" max="100" step="1" value="0">
+      <input type="range" id="natFire" aria-label="Ambient: foc" min="0" max="100" step="1" value="0">
       <div class="nm-val" id="lblNatFire">0%</div>
     </div>
     <div class="nature-row">
       <div class="nm-lbl">pădure</div>
-      <input type="range" id="natForest" min="0" max="100" step="1" value="0">
+      <input type="range" id="natForest" aria-label="Ambient: pădure" min="0" max="100" step="1" value="0">
       <div class="nm-val" id="lblNatForest">0%</div>
     </div>
     <div class="btn-row" style="margin-top:8px;">
@@ -2583,7 +2583,7 @@
   <button class="btn blue" id="btnWakeLock" aria-label="Wake lock">☀ WAKE LOCK</button>
   <button class="btn" id="btnTilt" aria-label="Tilt mod">📱 TILT MOD</button>
   <span style="font-size:10px; color:var(--txt-dim); letter-spacing:0.15em; text-transform:uppercase; margin-left:8px;">acordaj:</span>
-  <select id="tuningSystem" style="width: auto; min-width: 180px;">
+  <select id="tuningSystem" aria-label="Sistem de acordaj" style="width: auto; min-width: 180px;">
     <option value="equal">Equal Temperament (ET-12)</option>
     <option value="just">Just Intonation (C major)</option>
     <option value="pythag">Pythagorean</option>
@@ -2605,14 +2605,14 @@
   <div class="panel-title">step sequencer · 8 pași<span class="badge" id="seqBadge">OFF</span></div>
   <div class="seq-grid">
     <div class="seq-label">pitch (semi)</div>
-    <div class="seq-cell" data-step="0"><input type="number" value="0" min="-24" max="24"></div>
-    <div class="seq-cell" data-step="1"><input type="number" value="2" min="-24" max="24"></div>
-    <div class="seq-cell" data-step="2"><input type="number" value="4" min="-24" max="24"></div>
-    <div class="seq-cell" data-step="3"><input type="number" value="5" min="-24" max="24"></div>
-    <div class="seq-cell" data-step="4"><input type="number" value="7" min="-24" max="24"></div>
-    <div class="seq-cell" data-step="5"><input type="number" value="9" min="-24" max="24"></div>
-    <div class="seq-cell" data-step="6"><input type="number" value="11" min="-24" max="24"></div>
-    <div class="seq-cell" data-step="7"><input type="number" value="12" min="-24" max="24"></div>
+    <div class="seq-cell" data-step="0"><input type="number" aria-label="Pas 1, înălțime în semitonuri" value="0" min="-24" max="24"></div>
+    <div class="seq-cell" data-step="1"><input type="number" aria-label="Pas 2, înălțime în semitonuri" value="2" min="-24" max="24"></div>
+    <div class="seq-cell" data-step="2"><input type="number" aria-label="Pas 3, înălțime în semitonuri" value="4" min="-24" max="24"></div>
+    <div class="seq-cell" data-step="3"><input type="number" aria-label="Pas 4, înălțime în semitonuri" value="5" min="-24" max="24"></div>
+    <div class="seq-cell" data-step="4"><input type="number" aria-label="Pas 5, înălțime în semitonuri" value="7" min="-24" max="24"></div>
+    <div class="seq-cell" data-step="5"><input type="number" aria-label="Pas 6, înălțime în semitonuri" value="9" min="-24" max="24"></div>
+    <div class="seq-cell" data-step="6"><input type="number" aria-label="Pas 7, înălțime în semitonuri" value="11" min="-24" max="24"></div>
+    <div class="seq-cell" data-step="7"><input type="number" aria-label="Pas 8, înălțime în semitonuri" value="12" min="-24" max="24"></div>
     <div></div>
   </div>
   <div class="seq-grid">
@@ -3206,6 +3206,7 @@
 <footer>
   Laborator de Frecvențe v2.0 · Web Audio API · Single-file HTML ·
   <a href="https://alexio.tf" target="_blank" rel="noopener">alexio.tf</a>
+  <br><small>Conținut informativ/educațional; nu înlocuiește sfatul medical. Categoriile „Solfeggio”/„Schumann” nu au validare științifică; testul auditiv nu este audiogramă medicală. Ține volumul scăzut.</small>
 </footer>
 </div>
 <script>
@@ -7103,7 +7104,7 @@ if (typeof setupPhaseAnalyser === 'function') {
       const oldVal = oldInput ? parseFloat(oldInput.value) || 0 : 0;
       row.innerHTML =
         '<div class="eq-lbl">' + b.freq + '<br><span style="font-size:9px;opacity:0.7;">' + b.label + '</span></div>' +
-        '<input type="range" id="' + b.id + '" min="-18" max="18" step="0.5" value="' + oldVal + '">' +
+        '<input type="range" id="' + b.id + '" aria-label="EQ ' + b.freq + '" min="-18" max="18" step="0.5" value="' + oldVal + '">' +
         '<div class="eq-val" id="' + b.id + 'Val">' + (oldVal >= 0 ? '+' : '') + oldVal.toFixed(1) + ' dB</div>';
       replacement.appendChild(row);
     });
@@ -11001,7 +11002,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
 @media (max-width:560px){#tf-donate .tf-lbl{display:none}}
 @media print{#tf-donate{display:none}}
 </style>
-<input type="checkbox" id="tf-donate-cb" class="tf-cb" aria-hidden="true">
+<input type="checkbox" id="tf-donate-cb" class="tf-cb" tabindex="-1">
 <div class="tf-panel">
 <span class="tf-lbl">Sprijină:</span>
 <a class="tf-b tf-pat" href="https://www.patreon.com/c/alexio_tf" target="_blank" rel="noopener" aria-label="Sprijină pe Patreon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="15.4" cy="9.4" r="6.6" fill="currentColor"/><rect x="2.4" y="2.4" width="3.7" height="19.2" fill="currentColor"/></svg>Patreon</a>
