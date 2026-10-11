@@ -44,9 +44,9 @@
 </style>
 
 
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; media-src 'self' blob: data:; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:; script-src 'self' 'unsafe-inline' blob:; connect-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; media-src 'self' blob: data:; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:; script-src 'self' blob: 'sha256-yeDmlWcF+Rqg5fgATN72vOmvkyVXdvOwp6gWtZSQrks='; connect-src 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Laborator de Frecvențe v2.0.1 — Generator Audio Complet</title>
+<title>Laborator de Frecvențe v2.0.2 — Generator Audio Complet</title>
 <meta name="description" content="Generator de frecvențe v2.0: multi-band compressor (3 benzi), vocoder 8-band, MIDI CC learn, drum machine 4 voci × 16 pași, beat detection din mic, audiogram export JSON/CSV, freq interval calculator, spectral freeze. Plus toate funcțiile v1.9.">
 <style>
   :root {
@@ -302,6 +302,10 @@
   }
   .preset-tab:hover { color: var(--txt); border-color: var(--txt-dim); }
   .preset-tab.active { color: var(--amber); border-color: var(--amber); background: rgba(255,184,77,0.08); }
+  .preset-search { width: 100%; box-sizing: border-box; margin-bottom: 10px; padding: 8px 10px; background: var(--bg-inset); border: 1px solid var(--line); color: var(--txt); border-radius: 3px; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+  .preset-search:focus-visible { outline: 2px solid var(--amber); outline-offset: 1px; }
+  .preset-msg { color: var(--txt-dim); font-size: 11px; margin: 0 0 8px; font-family: 'JetBrains Mono', monospace; }
+  .preset-cat { display: block; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--txt-dim); margin-bottom: 2px; }
   .preset-btn {
     background: var(--bg-inset); border: 1px solid var(--line);
     padding: 8px 10px; border-radius: 3px; cursor: pointer;
@@ -1668,7 +1672,7 @@
       <svg viewBox="0 0 24 24"><path d="M2 12 Q 5 2, 8 12 T 14 12 T 20 12 H 22"/></svg>
     </div>
     <div class="brand-text">
-      <h1>LABORATOR DE FRECVENȚE<span class="ver-tag">v2.0.1</span></h1>
+      <h1>LABORATOR DE FRECVENȚE<span class="ver-tag">v2.0.2</span></h1>
       <div class="sub">generator audio · pian · acorduri · efecte · audiogramă · ambient</div>
     </div>
   </div>
@@ -2081,6 +2085,9 @@
       <button class="preset-tab" data-cat="tuning">Acordaje</button>
       <button class="preset-tab" data-cat="speakers">Verificare difuzoare</button>
     </div>
+    <label for="presetSearch" class="visually-hidden" style="position:absolute;left:-9999px">Caută în toate presetările</label>
+    <input type="search" id="presetSearch" class="preset-search" placeholder="Caută în toate categoriile (nume, descriere, Hz)…" autocomplete="off" spellcheck="false">
+    <p class="preset-msg" id="presetMsg" role="status" aria-live="polite"></p>
     <div class="preset-grid" id="presetGrid"></div>
   </div>
 
@@ -3206,7 +3213,7 @@
 </main>
 
 <footer>
-  Laborator de Frecvențe v2.0.1 · Web Audio API · Single-file HTML ·
+  Laborator de Frecvențe v2.0.2 · Web Audio API · Single-file HTML ·
   <a href="https://alexio.tf" target="_blank" rel="noopener">alexio.tf</a>
   <br><small>Conținut informativ/educațional; nu înlocuiește sfatul medical. Categoriile „Solfeggio”/„Schumann” nu au validare științifică; testul auditiv nu este audiogramă medicală. Ține volumul scăzut.</small>
 </footer>
@@ -4715,17 +4722,37 @@ function renderPresets(cat) {
   const grid = $('presetGrid'); grid.innerHTML = '';
   const items = PRESETS[cat] || [];
   $('presetCount').textContent = items.length;
-  items.forEach(p => {
-    const btn = document.createElement('button');
-    btn.className = 'preset-btn';
-    const isBinaural = p.beat !== undefined;
-    btn.innerHTML = '<div class="pname">' + p.name + '</div>' +
-      '<div class="pfreq">' + (isBinaural ? p.freq + ' Hz · Δ' + p.beat : p.freq + ' Hz') + '</div>' +
-      '<div class="pdesc">' + p.desc + '</div>';
-    btn.addEventListener('click', () => applyLibraryPreset(p, cat));
-    grid.appendChild(btn);
-  });
+  $('presetMsg').textContent = '';
+  items.forEach(p => grid.appendChild(presetButton(p, cat, false)));
 }
+function presetButton(p, cat, showCat) {
+  const btn = document.createElement('button');
+  btn.className = 'preset-btn';
+  const isBinaural = p.beat !== undefined;
+  btn.innerHTML = (showCat ? '<span class="preset-cat">' + cat + '</span>' : '') +
+    '<div class="pname">' + p.name + '</div>' +
+    '<div class="pfreq">' + (isBinaural ? p.freq + ' Hz · Δ' + p.beat : p.freq + ' Hz') + '</div>' +
+    '<div class="pdesc">' + p.desc + '</div>';
+  btn.addEventListener('click', () => applyLibraryPreset(p, cat));
+  return btn;
+}
+const presetNorm = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+function searchPresets() {
+  const raw = $('presetSearch').value.trim();
+  if (!raw) { const act = document.querySelector('.preset-tab.active'); renderPresets(act ? act.dataset.cat : 'solfeggio'); return; }
+  const terms = presetNorm(raw).split(/\s+/).filter(Boolean);
+  const grid = $('presetGrid'); grid.innerHTML = '';
+  let n = 0;
+  Object.keys(PRESETS).forEach(cat => {
+    (PRESETS[cat] || []).forEach(p => {
+      const hay = presetNorm(cat + ' ' + p.name + ' ' + p.desc + ' ' + p.freq + ' hz');
+      if (terms.every(t => hay.indexOf(t) !== -1)) { grid.appendChild(presetButton(p, cat, true)); n++; }
+    });
+  });
+  $('presetCount').textContent = n;
+  $('presetMsg').textContent = n ? n + (n === 1 ? ' rezultat în toate categoriile.' : ' rezultate în toate categoriile.') : 'Niciun preset nu se potrivește cu „' + raw + '”. Încearcă un cuvânt mai scurt sau o frecvență (ex. 528).';
+}
+$('presetSearch').addEventListener('input', searchPresets);
 function applyLibraryPreset(p, cat) {
   if (cat === 'binaural') {
     state.binaural = true; $('binaural').checked = true;
@@ -4757,6 +4784,7 @@ document.querySelectorAll('.preset-tab').forEach(t => {
   t.addEventListener('click', () => {
     document.querySelectorAll('.preset-tab').forEach(x => x.classList.remove('active'));
     t.classList.add('active');
+    $('presetSearch').value = '';
     renderPresets(t.dataset.cat);
   });
 });

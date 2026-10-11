@@ -20,12 +20,13 @@ Comportamentul depinde de browser (Web Audio, MIDI, AudioWorklet). Există o ver
 
 ## Istoric / Changelog
 
-Ultima actualizare: 11 octombrie 2026 (versiune v2.0.1).
+Ultima actualizare: 11 octombrie 2026 (versiune v2.0.2).
 
+- Bibliotecă de presetări: câmp de căutare în toate cele 6 categorii (nume, descriere, frecvență; fără diacritice, mai mulți termeni), cu contor și mesaj pentru zero rezultate; apăsarea unei etichete de categorie golește căutarea. CSP: `script-src` pe hash SHA-256, fără `'unsafe-inline'` (blob: rămâne permis pentru AudioWorklet/worker).
 - Conținutul este acum încadrat în `<main>`, bannerul „versiune mai nouă” este `aside`, iar titlurile din panoul de notițe sunt h2 (ordinea h1 → h2 corectă); câmpul BPM al metronomului are etichetă accesibilă. axe-core: 0 violări la 1280 și 360 px.
 - Pe ecrane înguste (360 px) panoul de notițe nu mai provoacă derulare orizontală a paginii.
 - Notificările (toast) sunt acum regiune `status` pentru cititoare de ecran.
-- Numărul de versiune a fost ridicat în titlu, antet și subsol (v2.0 → v2.0.1). Versiunea mai nouă rămâne [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/).
+- Numărul de versiune a fost ridicat în titlu, antet și subsol (v2.0 → v2.0.1 → v2.0.2). Versiunea mai nouă rămâne [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/).
 
 ## Licență
 CC0 1.0 (domeniu public), conform antetului din `index.html`; vezi `LICENSE`.
