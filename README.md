@@ -20,8 +20,9 @@ Comportamentul depinde de browser (Web Audio, MIDI, AudioWorklet). Există o ver
 
 ## Istoric / Changelog
 
-Ultima actualizare: 11 octombrie 2026 (versiune v2.0.2).
+Ultima actualizare: 11 octombrie 2026 (versiune v2.0.3).
 
+- La pornire nu mai apar cele 6 notificări „v2.0: …” (note de versiune care se suprapuneau peste interfață ~10 s, mai ales pe mobil); a rămas doar sugestia unică de primul start. Stiva de notificări este limitată la 3 (cea mai veche se elimină).
 - Bibliotecă de presetări: câmp de căutare în toate cele 6 categorii (nume, descriere, frecvență; fără diacritice, mai mulți termeni), cu contor și mesaj pentru zero rezultate; apăsarea unei etichete de categorie golește căutarea. CSP: `script-src` pe hash SHA-256, fără `'unsafe-inline'` (blob: rămâne permis pentru AudioWorklet/worker).
 - Conținutul este acum încadrat în `<main>`, bannerul „versiune mai nouă” este `aside`, iar titlurile din panoul de notițe sunt h2 (ordinea h1 → h2 corectă); câmpul BPM al metronomului are etichetă accesibilă. axe-core: 0 violări la 1280 și 360 px.
 - Pe ecrane înguste (360 px) panoul de notițe nu mai provoacă derulare orizontală a paginii.

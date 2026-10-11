@@ -44,9 +44,9 @@
 </style>
 
 
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; media-src 'self' blob: data:; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:; script-src 'self' blob: 'sha256-yeDmlWcF+Rqg5fgATN72vOmvkyVXdvOwp6gWtZSQrks='; connect-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; media-src 'self' blob: data:; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:; script-src 'self' blob: 'sha256-iqwGCSylM12Wb7oFzun/YbMfK9AD2wwAesJ/S6T9tss='; connect-src 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Laborator de Frecvențe v2.0.2 — Generator Audio Complet</title>
+<title>Laborator de Frecvențe v2.0.3 — Generator Audio Complet</title>
 <meta name="description" content="Generator de frecvențe v2.0: multi-band compressor (3 benzi), vocoder 8-band, MIDI CC learn, drum machine 4 voci × 16 pași, beat detection din mic, audiogram export JSON/CSV, freq interval calculator, spectral freeze. Plus toate funcțiile v1.9.">
 <style>
   :root {
@@ -1672,7 +1672,7 @@
       <svg viewBox="0 0 24 24"><path d="M2 12 Q 5 2, 8 12 T 14 12 T 20 12 H 22"/></svg>
     </div>
     <div class="brand-text">
-      <h1>LABORATOR DE FRECVENȚE<span class="ver-tag">v2.0.2</span></h1>
+      <h1>LABORATOR DE FRECVENȚE<span class="ver-tag">v2.0.3</span></h1>
       <div class="sub">generator audio · pian · acorduri · efecte · audiogramă · ambient</div>
     </div>
   </div>
@@ -3213,7 +3213,7 @@
 </main>
 
 <footer>
-  Laborator de Frecvențe v2.0.2 · Web Audio API · Single-file HTML ·
+  Laborator de Frecvențe v2.0.3 · Web Audio API · Single-file HTML ·
   <a href="https://alexio.tf" target="_blank" rel="noopener">alexio.tf</a>
   <br><small>Conținut informativ/educațional; nu înlocuiește sfatul medical. Categoriile „Solfeggio”/„Schumann” nu au validare științifică; testul auditiv nu este audiogramă medicală. Ține volumul scăzut.</small>
 </footer>
@@ -6888,6 +6888,7 @@ if (typeof setupPhaseAnalyser === 'function') {
     t.className = 'toast' + (opts.kind ? ' ' + opts.kind : '');
     t.textContent = message;
     c.appendChild(t);
+    while (c.children.length > 3) { c.removeChild(c.firstChild); }
     const dur = opts.duration || 3500;
     const timer = setTimeout(function() {
       t.classList.add('closing');
@@ -7971,12 +7972,6 @@ if (typeof setupPhaseAnalyser === 'function') {
     if (typeof renderUserPresets === 'function') renderUserPresets();
   }, 150);
 
-  // Final v2.0 confirmation toast
-  setTimeout(function() {
-    if (typeof appToast === 'function') {
-      appToast('v2.0: ' + (typeof analyser !== 'undefined' && analyser ? 'FFT mărit la 8192 (rezoluție 5.4 Hz/bin), ' : '') + 'rutare semnale test consistentă, recorder lazy.', { kind: 'blue', duration: 3500 });
-    }
-  }, 1200);
 
 })();
 
@@ -8271,12 +8266,6 @@ if (typeof setupPhaseAnalyser === 'function') {
     if (typeof renderFavorites === 'function') renderFavorites();
   }, 100);
 
-  // ===== Final v2.0 confirmation =====
-  setTimeout(function() {
-    if (typeof appToast === 'function') {
-      appToast('v2.0: MIDI polifonie (4 voci), voice/chord exclusivitate, fuzzy search, calibrare audiogramă, ' + Object.keys(LIMITS).length + ' constante named.', { kind: 'blue', duration: 4500 });
-    }
-  }, 1500);
 
 })();
 
@@ -8873,12 +8862,6 @@ registerProcessor('recorder-worklet', RecorderProcessor);
     }, 2000);
   }
 
-  // Final v2.0 announcement
-  setTimeout(function() {
-    if (typeof appToast === 'function') {
-      appToast('v2.0: AudioWorklet recorder, WAV upload→wavetable, cymatics simulator, ' + (typeof FREQ_DATABASE !== 'undefined' ? FREQ_DATABASE.length : '?') + ' frecvențe în db, 5 sisteme acordaj, tilt mod, wake lock.', { kind: 'blue', duration: 5500 });
-    }
-  }, 2500);
 
 })();
 
@@ -9505,12 +9488,6 @@ registerProcessor('recorder-worklet', RecorderProcessor);
     };
   }
 
-  // ===== Final v2.0 announcement =====
-  setTimeout(function() {
-    if (typeof appToast === 'function') {
-      appToast('v2.0: Step sequencer, tuner, ear training, metronom, Karplus-Strong, harmonic overlay, save PNG, share API, theme switcher.', { kind: 'blue', duration: 5500 });
-    }
-  }, 3500);
 
 })();
 
@@ -10221,12 +10198,6 @@ registerProcessor('recorder-worklet', RecorderProcessor);
     });
   })();
 
-  // Final v2.0 announcement
-  setTimeout(function() {
-    if (typeof appToast === 'function') {
-      appToast('v2.0: Granular synth, audio looper, filter envelope, ping-pong delay, IR upload, random walk, S/H LFO, MIDI OUT.', { kind: 'blue', duration: 5500 });
-    }
-  }, 4500);
 
 })();
 
@@ -11002,12 +10973,6 @@ registerProcessor('recorder-worklet', RecorderProcessor);
     cx.restore();
   };
 
-  // ===== Final v2.0 announcement =====
-  setTimeout(function() {
-    if (typeof appToast === 'function') {
-      appToast('v2.0: Multi-band compressor, vocoder, MIDI CC learn, drum machine, beat detect, freq calc, audiogram export, spectral freeze.', { kind: 'blue', duration: 6000 });
-    }
-  }, 5500);
 
 })();
 
