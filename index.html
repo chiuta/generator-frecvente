@@ -46,7 +46,7 @@
 
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; media-src 'self' blob: data:; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:; script-src 'self' 'unsafe-inline' blob:; connect-src 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Laborator de Frecvențe v2.0 — Generator Audio Complet</title>
+<title>Laborator de Frecvențe v2.0.1 — Generator Audio Complet</title>
 <meta name="description" content="Generator de frecvențe v2.0: multi-band compressor (3 benzi), vocoder 8-band, MIDI CC learn, drum machine 4 voci × 16 pași, beat detection din mic, audiogram export JSON/CSV, freq interval calculator, spectral freeze. Plus toate funcțiile v1.9.">
 <style>
   :root {
@@ -313,7 +313,7 @@
   .preset-btn .pdesc { font-size: 9px; color: var(--txt-faint); margin-top: 4px; }
   .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
   @media (max-width: 700px) { .info-grid { grid-template-columns: 1fr; } }
-  .info-grid h3 { font-family: 'Major Mono Display', monospace; font-size: 11px; letter-spacing: 0.25em; color: var(--amber); text-transform: lowercase; margin: 0 0 10px 0; }
+  .info-grid h2 { font-family: 'Major Mono Display', monospace; font-size: 11px; letter-spacing: 0.25em; color: var(--amber); text-transform: lowercase; margin: 0 0 10px 0; }
   .info-grid p { color: var(--txt-dim); font-size: 12px; line-height: 1.6; margin: 0 0 10px 0; }
   .info-grid strong { color: var(--txt); font-weight: 500; }
   .warning {
@@ -804,7 +804,7 @@
     .stage-row .x-btn, .stage-row .up-btn, .stage-row .dn-btn { width: 28px; height: 28px; }
 
     /* Info section single column */
-    .info-grid { grid-template-columns: 1fr; gap: 18px; }
+    .info-grid { grid-template-columns: minmax(0,1fr); gap: 18px; } .info-grid > div { min-width: 0; } .info-grid p, .info-grid h2 { overflow-wrap: anywhere; }
     .info-grid p { font-size: 12px; }
 
     /* Performance mode close bigger */
@@ -1643,7 +1643,7 @@
 </head>
 <body>
 <!-- Notă: versiune mai nouă disponibilă (colapsabilă, CSS pur). -->
-<div id="tf-superseded">
+<aside id="tf-superseded" aria-label="Notă: versiune mai nouă">
 <style>
 #tf-superseded{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 #tf-superseded .tf-cb{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
@@ -1659,7 +1659,7 @@
 <span>Acest instrument are o versiune mai nouă și mai completă: <a href="https://chiuta.github.io/FrequencyLaboratory/" target="_blank" rel="noopener" style="color:#7dd3fc;text-decoration:underline"><b>FrequencyLaboratory</b></a> (în același portofoliu).</span>
 <label for="tf-superseded-cb" class="tf-x" title="Închide" aria-label="Închide">✕</label>
 </div>
-</div>
+</aside>
 <div class="wrap">
 
 <header>
@@ -1668,7 +1668,7 @@
       <svg viewBox="0 0 24 24"><path d="M2 12 Q 5 2, 8 12 T 14 12 T 20 12 H 22"/></svg>
     </div>
     <div class="brand-text">
-      <h1>LABORATOR DE FRECVENȚE<span class="ver-tag">v2.0</span></h1>
+      <h1>LABORATOR DE FRECVENȚE<span class="ver-tag">v2.0.1</span></h1>
       <div class="sub">generator audio · pian · acorduri · efecte · audiogramă · ambient</div>
     </div>
   </div>
@@ -1690,6 +1690,7 @@
   </div>
 </header>
 
+<main id="main">
 <div class="status-bar">
   <div class="stat"><span class="lbl">A:</span><span class="val" id="sFreqA">— Hz</span></div>
   <div class="stat"><span class="lbl">B:</span><span class="val" id="sFreqB">— Hz</span></div>
@@ -2088,27 +2089,27 @@
     <div class="panel-title">notițe de utilizare<span class="badge">INFO</span></div>
     <div class="info-grid">
       <div>
-        <h3>conexiune cu stație / combină</h3>
+        <h2>conexiune cu stație / combină</h2>
         <p>Difuzoarele de telefon și ale laptopului redau prost frecvențele sub <strong>~120 Hz</strong> și peste <strong>~14 kHz</strong>. Pentru un test serios, conectează ieșirea audio la o stație, o combină, o pereche de boxe active sau căști de calitate.</p>
         <p>Pentru <strong>beat-uri binaurale</strong> e <em>obligatoriu</em> să folosești căști — efectul apare doar când urechea stângă aude o frecvență iar dreapta o frecvență ușor diferită.</p>
-        <h3 style="margin-top:18px;">noutăți v2.0</h3>
+        <h2 style="margin-top:18px;">noutăți v2.0</h2>
         <p><strong>ADSR</strong> — în loc de fade plat, oscilatorul are atac, decay, sustain și release ca un sintetizator real. <strong>Filtru master</strong> cu rezonanță Q (până la 30) — sweep-uiește prin el cu Q mare pentru sunete „acid". <strong>Înregistrare WAV</strong> — descarcă orice rulezi ca fișier .wav 16-bit. <strong>Sleep timer</strong> — oprește automat după N minute. <strong>Sesiuni programabile</strong> — definește etape cu crossfade. <strong>Tonuri izocronice</strong> — AM cu LFO pătrat, alternativă la binaurale fără căști. <strong>SPL meter + măsurare cameră</strong> — folosește microfonul telefonului ca instrument de măsură.</p>
       </div>
       <div>
-        <h3>sesiuni programabile · cum se folosesc</h3>
+        <h2>sesiuni programabile · cum se folosesc</h2>
         <p>Definești o etapă (nume, frecvență, beat binaural, durată, crossfade, nivel) și apeși „Adaugă". Etapele se rulează în ordine. La trecerea între etape, frecvența și nivelul migrează lin în timpul de crossfade — fără sărituri bruște.</p>
         <p>Două șabloane gata: <strong>Meditație</strong> (Theta → Alpha → Theta, ~30 min) și <strong>Adormire</strong> (Alpha → Theta → Delta cu coborâre lină de frecvență timp de 40 min).</p>
-        <h3 style="margin-top:18px;">măsurare cameră (mic-based)</h3>
+        <h2 style="margin-top:18px;">măsurare cameră (mic-based)</h2>
         <p>Cu microfonul activ și boxele conectate, apasă „Măsoară camera". Aplicația face un sweep logaritmic și măsoară prin mic ce nivel ajunge în cameră la fiecare frecvență. <strong>Vârfuri</strong> = rezonanțe (acumulare în colț). <strong>Gropi adânci</strong> = anulări prin reflexii (poziționare proastă boxe vs. ascultător).</p>
         <p class="warning" style="margin-top:8px;">Microfonul telefonului nu e calibrat profesional — arată tendințe relative, nu valori absolute.</p>
       </div>
       <div>
-        <h3>presets utilizator · backup</h3>
+        <h2>presets utilizator · backup</h2>
         <p>Salvează configurația curentă (toate setările) cu un nume. <strong>Export JSON</strong> îți dă un fișier cu toate presets-urile tale — bun pentru backup sau transfer pe alt dispozitiv. <strong>Import JSON</strong> le adaugă peste cele existente (nu suprascrie).</p>
-        <h3 style="margin-top:18px;">siguranță auditivă</h3>
+        <h2 style="margin-top:18px;">siguranță auditivă</h2>
         <p>Pornește mereu cu <strong>master sub 20%</strong> și ridică treptat. Frecvențele înalte (peste 4 kHz) la volum mare sunt cele mai dăunătoare urechii. Frecvențele foarte joase pot deteriora difuzoare care nu sunt construite pentru ele.</p>
         <p class="warning" style="margin-top:8px;">Nu folosi această aplicație ca <em>tratament medical</em>. Pentru tinitus, dureri de urechi sau orice problemă auditivă, consultă un ORL.</p>
-        <h3 style="margin-top:18px;">scurtături tastatură</h3>
+        <h2 style="margin-top:18px;">scurtături tastatură</h2>
         <p><strong>Space</strong> — pornește/oprește · <strong>P</strong> — panic · <strong>R</strong> — start/stop înregistrare · <strong>↑/↓</strong> — frecvență A ±1 Hz · <strong>Shift+↑/↓</strong> — ±10 Hz · <strong>1-4</strong> — formă undă A</p>
       </div>
 
@@ -3202,9 +3203,10 @@
   </div>
 </div>
 
+</main>
 
 <footer>
-  Laborator de Frecvențe v2.0 · Web Audio API · Single-file HTML ·
+  Laborator de Frecvențe v2.0.1 · Web Audio API · Single-file HTML ·
   <a href="https://alexio.tf" target="_blank" rel="noopener">alexio.tf</a>
   <br><small>Conținut informativ/educațional; nu înlocuiește sfatul medical. Categoriile „Solfeggio”/„Schumann” nu au validare științifică; testul auditiv nu este audiogramă medicală. Ține volumul scăzut.</small>
 </footer>
@@ -6845,6 +6847,8 @@ if (typeof setupPhaseAnalyser === 'function') {
       c = document.createElement('div');
       c.className = 'toast-container';
       c.id = 'toastContainer';
+      c.setAttribute('role', 'status');
+      c.setAttribute('aria-live', 'polite');
       document.body.appendChild(c);
     }
     return c;
@@ -9348,7 +9352,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
     row.className = 'metro-row';
     row.innerHTML = '<button class="btn small amber" id="btnMetroToggle">⏱ METRONOM OFF</button>' +
       '<div class="metro-led" id="metroLED"></div>' +
-      '<input type="number" id="metroBPM" min="30" max="300" step="1" value="120" style="width:60px;" title="BPM">' +
+      '<input type="number" id="metroBPM" min="30" max="300" step="1" value="120" style="width:60px;" title="BPM" aria-label="BPM">' +
       '<label class="toggle" style="margin-left:4px;"><input type="checkbox" id="metroAccent" checked><span class="toggle-track"></span><span class="toggle-label">accent</span></label>';
     btnPanic.closest('.ctrl').insertAdjacentElement('afterend', row);
     document.getElementById('btnMetroToggle').addEventListener('click', function() {
@@ -10982,7 +10986,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
 
 </script>
 <!-- tf-donate: sprijin voluntar (Patreon + Buy Me a Coffee) — self-contained, fără resurse externe, fără JS -->
-<div id="tf-donate" aria-label="Sprijină autorul">
+<div id="tf-donate" role="complementary" aria-label="Sprijină autorul">
 <style>
 #tf-donate{position:fixed;right:14px;bottom:14px;z-index:2147483600;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1}
 #tf-donate *{box-sizing:border-box}
