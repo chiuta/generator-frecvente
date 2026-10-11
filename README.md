@@ -1,5 +1,10 @@
 # Laborator de Frecvențe (generator-frecvente)
 
+**Live / demo:** https://chiuta.github.io/generator-frecvente/
+
+![generator-frecvente — captură de ecran / screenshot](screenshot.png)
+
+
 Instrument audio într-un singur fișier HTML (`index.html`), rulat în browser prin Web Audio API: oscilatoare A/B (inclusiv mod binaural), secvențiator, EQ, sunete ambientale, preseturi de frecvențe, înregistrare, măsurători cu microfonul și un test auditiv orientativ.
 
 **Conținut informativ/educațional; nu înlocuiește sfatul medical.** Categoriile „Solfeggio” și „Schumann” provin din tradiții moderne (New Age) și nu au validare științifică; nu se promit efecte terapeutice. Testul auditiv arată un prag relativ, nu este audiogramă medicală. Presetările cu nume de tip „eliberarea fricii” sau similar nu au efect medical dovedit. Pentru tinitus sau probleme de auz consultă un medic ORL. Ține volumul scăzut și folosește căști cu prudență.
