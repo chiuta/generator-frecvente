@@ -1,6 +1,6 @@
 # Laborator de Frecvențe (generator-frecvente)
 
-**Versiune:** 2.0.4 · **Ultima actualizare:** 12 octombrie 2026
+**Versiune:** 2.1.0 · **Ultima actualizare:** 14 octombrie 2026
 
 **Live / demo:** https://chiuta.github.io/generator-frecvente/
 
@@ -21,6 +21,8 @@ Verificat prin audit: pagina nu face cereri de rețea (nu există `fetch`, CDN s
 Comportamentul depinde de browser (Web Audio, MIDI, AudioWorklet). Există o versiune mai nouă a instrumentului în același portofoliu: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (linkul apare și în bannerul din pagină).
 
 ## Istoric / Changelog
+
+- 2.1.0 — 2026-10-14: Copie de rezervă și etichetare date (fff-kit).
 
 - 2.0.4 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
 - La pornire nu mai apar cele 6 notificări „v2.0: …” (note de versiune care se suprapuneau peste interfață ~10 s, mai ales pe mobil); a rămas doar sugestia unică de primul start. Stiva de notificări este limitată la 3 (cea mai veche se elimină).
