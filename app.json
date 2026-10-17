@@ -19,8 +19,8 @@
     "lab_frecv_theme",
     "lab_frecv_tutorial_seen"
   ],
-  "sizeBytes": 819640,
-  "sha256": "f203fc1c2c8b4141c3b3caeaa97f6448f5f58bc140aa012f03498d450e623c8f",
+  "sizeBytes": 819609,
+  "sha256": "7e70171ad5a46e1f9627957ee885fae32a0c3617100ff47555b59a27b592d1f9",
   "csp": {
     "present": true,
     "directives": {
