@@ -33,6 +33,6 @@ Comportamentul depinde de browser (Web Audio, MIDI, AudioWorklet). Există o ver
 - Numărul de versiune a fost ridicat în titlu, antet și subsol (v2.0 → v2.0.1 → v2.0.2). Versiunea mai nouă rămâne [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/).
 
 ## Licență
-CC0 1.0 (domeniu public), conform antetului din `index.html`; vezi `LICENSE`.
+MIT, conform antetului din `index.html`; vezi `LICENSE`.
 
 Audit: 2026-10-10
