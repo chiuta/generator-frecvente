@@ -8,7 +8,7 @@ Oberflächensprachen: **Română, English, Français, Italiano, Español, Portug
 
 **Online / Demo:** https://chiuta.github.io/generator-frecvente/
 
-![generator-frecvente — Screenshot](screenshot.png)
+![generator-frecvente — Screenshot](screenshot.de.png)
 
 Audio-Werkzeug in einer einzigen HTML-Datei (`index.html`), das im Browser über die Web Audio API läuft: A/B-Oszillatoren (auch im Binauralmodus), Sequenzer, Equalizer, Umgebungsgeräusche, Frequenz-Presets, Aufnahme, Messungen mit dem Mikrofon und ein orientierender Hörtest.
 

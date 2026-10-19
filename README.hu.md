@@ -8,7 +8,7 @@ A felület nyelvei: **Română, English, Français, Italiano, Español, Portugu�
 
 **Online / bemutató:** https://chiuta.github.io/generator-frecvente/
 
-![generator-frecvente — képernyőkép](screenshot.png)
+![generator-frecvente — képernyőkép](screenshot.hu.png)
 
 Egyetlen HTML-fájlban (`index.html`) működő hangeszköz, amely a böngészőben fut a Web Audio API-n keresztül: A/B oszcillátorok (binaurális móddal együtt), szekvenszer, hangszínszabályzó, környezeti hangok, frekvencia-előbeállítások, felvétel, mikrofonos mérések és tájékoztató jellegű hallásteszt.
 
