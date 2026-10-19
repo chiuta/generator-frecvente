@@ -1,0 +1,40 @@
+# Laboratorio de frecuencias (generator-frecvente)
+
+[English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
+
+**Versión:** 2.1.1 · **Última actualización:** 2026-10-19
+
+**En línea / demo:** https://chiuta.github.io/generator-frecvente/
+
+![generator-frecvente — captura de pantalla](screenshot.png)
+
+Herramienta de audio en un único archivo HTML (`index.html`), ejecutada en el navegador mediante la Web Audio API: osciladores A/B (incluido el modo binaural), secuenciador, ecualizador, sonidos ambientales, preajustes de frecuencias, grabación, mediciones con el micrófono y una prueba auditiva orientativa.
+
+**Contenido informativo y educativo; no sustituye el consejo médico.** Las categorías «Solfeggio» y «Schumann» proceden de tradiciones modernas (New Age) y carecen de validación científica; no se promete ningún efecto terapéutico. La prueba auditiva muestra un umbral relativo y no es una audiometría médica. Los preajustes con nombres del tipo «liberación del miedo» o similares no tienen ningún efecto médico demostrado. Si tienes tinnitus o problemas de audición, consulta a un otorrinolaringólogo. Mantén el volumen bajo y usa los auriculares con precaución.
+
+## Uso
+Abre `index.html` en un navegador moderno (o la versión publicada mediante GitHub Pages). Pulsa «Start» para iniciar el sonido; los atajos se describen en la página (tecla `?`).
+
+## Datos y privacidad
+Verificado mediante auditoría: la página no realiza solicitudes de red (no hay `fetch`, CDN ni fuentes externas; las fuentes están incorporadas). El micrófono solo se usa si lo activas de forma explícita, y la señal se procesa localmente. Los ajustes pueden conservarse en `localStorage`. Los únicos enlaces externos son los de apoyo voluntario y el sitio del autor.
+
+## Limitaciones
+El comportamiento depende del navegador (Web Audio, MIDI, AudioWorklet). Existe una versión más reciente de la herramienta en el mismo portafolio: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (el enlace aparece también en el banner de la página).
+
+## Historial / Changelog
+
+- 2.1.1 — 2026-10-19: en el banner, un enlace «Abrir la configuración actual en FrequencyLaboratory» (el estado actual en el fragmento `#state=`, en una pestaña nueva; sin solicitudes de red).
+- 2.1.0 — 2026-10-14: copia de seguridad y etiquetado de datos (fff-kit).
+
+- 2.0.4 — 2026-10-12: la versión y la fecha de la última actualización se muestran en la aplicación
+- Al iniciar ya no aparecen las 6 notificaciones «v2.0: …» (notas de versión que se superponían a la interfaz durante ~10 s, sobre todo en móvil); solo queda la sugerencia única de primer inicio. La pila de notificaciones se limita a 3 (la más antigua se elimina).
+- Biblioteca de preajustes: campo de búsqueda en las 6 categorías (nombre, descripción, frecuencia; sin distinguir diacríticos, varios términos), con contador y mensaje cuando no hay resultados; al pulsar la etiqueta de una categoría se vacía la búsqueda. CSP: `script-src` mediante hash SHA-256, sin `'unsafe-inline'` (blob: sigue permitido para AudioWorklet/worker).
+- El contenido está ahora envuelto en `<main>`, el banner de «versión más reciente» es un `aside` y los títulos del panel de notas son h2 (orden h1 → h2 correcto); el campo BPM del metrónomo tiene una etiqueta accesible. axe-core: 0 infracciones a 1280 y 360 px.
+- En pantallas estrechas (360 px) el panel de notas ya no provoca desplazamiento horizontal de la página.
+- Las notificaciones (toasts) son ahora una región `status` para lectores de pantalla.
+- El número de versión se actualizó en el título, la cabecera y el pie de página (v2.0 → v2.0.1 → v2.0.2). La versión más reciente sigue siendo [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/).
+
+## Licencia
+MIT, según la cabecera de `index.html`; véase `LICENSE`.
+
+Auditoría: 2026-10-10
