@@ -2,7 +2,7 @@
   "schema": 1,
   "slug": "generator-frecvente",
   "name": "Laborator de Frecvențe v2.1.0 — Generator Audio Complet",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "updated": "2026-10-19",
   "description": "Generator de frecvențe v2.0: multi-band compressor (3 benzi), vocoder 8-band, MIDI CC learn, drum machine 4 voci × 16 pași, beat detection din mic, audiogram export JSON/CSV, freq interval calculator, spectral freeze. Plus toate funcțiile v1.9.",
   "egress": [],
@@ -15,13 +15,14 @@
   ],
   "storageKeys": [
     "lab_frecv_favorites_v1",
+    "lab_frecv_lang",
     "lab_frecv_midi_mappings",
     "lab_frecv_presets_v1",
     "lab_frecv_theme",
     "lab_frecv_tutorial_seen"
   ],
-  "sizeBytes": 819844,
-  "sha256": "ca4b4fd26e03b22dc0669ea89bd3a2e8e5924ac5803055abea06efefe5851f50",
+  "sizeBytes": 1127082,
+  "sha256": "81af86377f1efb3e0b2c325a2a6db249b3a1d0eb9e486bd0468e9a158ee51da0",
   "csp": {
     "present": true,
     "directives": {
@@ -34,7 +35,7 @@
       "base-uri": "'self'",
       "form-action": "'self'",
       "worker-src": "'self' blob:",
-      "script-src": "'self' blob: sha256×4",
+      "script-src": "'self' blob: sha256×5",
       "connect-src": "'self'",
       "manifest-src": "'self'"
     },
