@@ -20,8 +20,8 @@
     "lab_frecv_theme",
     "lab_frecv_tutorial_seen"
   ],
-  "sizeBytes": 819208,
-  "sha256": "70e53f8f89be8d6dad35e1ed7cf98bdc1fe2b46fc9c3ad6fa32def185873a5c0",
+  "sizeBytes": 819844,
+  "sha256": "ca4b4fd26e03b22dc0669ea89bd3a2e8e5924ac5803055abea06efefe5851f50",
   "csp": {
     "present": true,
     "directives": {
@@ -56,7 +56,7 @@
     ]
   },
   "kit": {
-    "version": "1.1.0",
+    "version": "1.1.1",
     "modules": [
       "core",
       "label",
