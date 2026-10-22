@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 2.2.8 · **Utolsó frissítés:** 2026-10-23
+**Verzió:** 2.2.9 · **Utolsó frissítés:** 2026-10-23
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,7 @@ Auditálással ellenőrizve: az oldal nem küld hálózati kéréseket (nincs `f
 A működés a böngészőtől függ (Web Audio, MIDI, AudioWorklet). Az eszköz újabb változata létezik ugyanebben a portfólióban: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (a hivatkozás az oldal bannerében is megjelenik).
 
 ## Előzmények / Changelog
+- **2.2.9 — 2026-10-23:** fff-kit 1.2.0: megszűntek az utolsó natív `alert`/`confirm`/`prompt` hívások: az üzenetek akadálymentes értesítésként (aria-live, a felület nyelvén) jelennek meg, egy kedvenc hosszú nyomással történő törlése pedig a készlet `FFF.dialog` párbeszédablakában kér megerősítést. A „Mode m / Mode n” címkék most mind a 8 nyelven le vannak fordítva.
 - **2.2.7 — 2026-10-22:** Érintési célpontok: a „felharmonikusok mutatása a spektrumon” jelölőnégyzet legalább 24 px magas címkében van. Újabb ellenőrzés 360 és 1366 px-en (kezdőállapot, kinyitott szakaszok, rejtett panelek): nem marad 24 px alatti célpont és 12 px alatti szöveg.
 
 ### 2.2.6 — 2026-10-22

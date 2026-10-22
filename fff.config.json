@@ -1,0 +1,5 @@
+{
+  "exceptions": [
+    {"rule": "i18n-parity", "reason": "Dicționarul T are drept cheie textul-sursă român: pentru «ro» nu există intrări (cheia este deja textul românesc); celelalte 7 limbi sunt complete."}
+  ]
+}

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 2.2.8 · **Última atualização:** 2026-10-23
+**Versão:** 2.2.9 · **Última atualização:** 2026-10-23
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,7 @@ Verificado por auditoria: a página não faz pedidos de rede (não existem `fetc
 O comportamento depende do navegador (Web Audio, MIDI, AudioWorklet). Existe uma versão mais recente da ferramenta no mesmo portefólio: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (a ligação aparece também no banner da página).
 
 ## Histórico / Changelog
+- **2.2.9 — 2026-10-23:** fff-kit 1.2.0: desapareceram as últimas chamadas nativas a `alert`/`confirm`/`prompt`: as mensagens surgem como notificações acessíveis (aria-live, no idioma da interface) e apagar um favorito com um toque longo pede confirmação no diálogo `FFF.dialog` do kit. As etiquetas «Mode m / Mode n» estão agora traduzidas nos 8 idiomas.
 - **2.2.7 — 2026-10-22:** Alvos táteis: a caixa «mostrar harmónicos no espectro» fica numa etiqueta com pelo menos 24 px de altura. Nova auditoria a 360 e 1366 px (estado inicial, secções expandidas, painéis ocultos): não resta nenhum alvo abaixo de 24 px nem texto abaixo de 12 px.
 
 ### 2.2.6 — 2026-10-22

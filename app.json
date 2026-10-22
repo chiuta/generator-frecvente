@@ -2,7 +2,7 @@
   "schema": 1,
   "slug": "generator-frecvente",
   "name": "Laborator de Frecvențe — Generator Audio Complet",
-  "version": "2.2.8",
+  "version": "2.2.9",
   "updated": "2026-10-23",
   "description": "Generator de frecvențe v2.0: multi-band compressor (3 benzi), vocoder 8-band, MIDI CC learn, drum machine 4 voci × 16 pași, beat detection din mic, audiogram export JSON/CSV, freq interval calculator, spectral freeze. Plus toate funcțiile v1.9.",
   "egress": [],
@@ -21,8 +21,8 @@
     "generator-frecvente.theme",
     "generator-frecvente.tutorial_seen"
   ],
-  "sizeBytes": 1187546,
-  "sha256": "d5de4aa6eafe1c51e35eb9ac862e3e48c4ed7e8fbb3c581a2ea371839a8c975f",
+  "sizeBytes": 1188636,
+  "sha256": "d1f966a2d12d622df6afb64b2cc349fcd63a40e4db6807c4d0dc887b3ee228f7",
   "csp": {
     "present": true,
     "directives": {
@@ -77,5 +77,11 @@
       "bundle"
     ]
   },
-  "selfSerializing": false
+  "selfSerializing": false,
+  "exceptions": [
+    {
+      "rule": "i18n-parity",
+      "reason": "Dicționarul T are drept cheie textul-sursă român: pentru «ro» nu există intrări (cheia este deja textul românesc); celelalte 7 limbi sunt complete."
+    }
+  ]
 }
