@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 2.2.1 · **Dernière mise à jour :** 2026-10-19
+**Version :** 2.2.2 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,9 @@ Vérifié par audit : la page n'effectue aucune requête réseau (pas de `fetch`
 Le comportement dépend du navigateur (Web Audio, MIDI, AudioWorklet). Une version plus récente de l'outil existe dans le même portefeuille : [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (le lien figure aussi dans la bannière de la page).
 
 ## Historique / Changelog
+
+### 2.2.2 — 2026-10-22
+- Le titre du panneau « thème · partage » est désormais traduit en roumain (« partajare »).
 
 - 2.1.1 — 2026-10-19 : dans la bannière, un lien « Ouvrir la configuration actuelle dans FrequencyLaboratory » (l'état courant dans le fragment `#state=`, nouvel onglet ; sans requêtes réseau).
 - 2.1.0 — 2026-10-14 : sauvegarde et étiquetage des données (fff-kit).

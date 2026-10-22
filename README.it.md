@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 2.2.1 · **Ultimo aggiornamento:** 2026-10-19
+**Versione:** 2.2.2 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,9 @@ Verificato tramite audit: la pagina non effettua richieste di rete (non ci sono 
 Il comportamento dipende dal browser (Web Audio, MIDI, AudioWorklet). Nello stesso portfolio esiste una versione più recente dello strumento: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (il link compare anche nel banner della pagina).
 
 ## Cronologia / Changelog
+
+### 2.2.2 — 2026-10-22
+- Il titolo del pannello « tema · condivisione » è ora tradotto anche in rumeno (« partajare »).
 
 - 2.1.1 — 2026-10-19: nel banner, un link «Apri la configurazione corrente in FrequencyLaboratory» (lo stato corrente nel frammento `#state=`, in una nuova scheda; senza richieste di rete).
 - 2.1.0 — 2026-10-14: backup ed etichettatura dei dati (fff-kit).

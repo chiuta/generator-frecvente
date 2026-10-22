@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.2.1 · **Last updated:** 2026-10-19
+**Version:** 2.2.2 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,9 @@ Verified by audit: the page makes no network requests (there is no `fetch`, CDN 
 Behaviour depends on the browser (Web Audio, MIDI, AudioWorklet). A newer version of the tool exists in the same portfolio: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (the link also appears in the banner on the page).
 
 ## History / Changelog
+
+### 2.2.2 — 2026-10-22
+- The "theme · share" panel title is now translated in Romanian ("partajare").
 
 - 2.1.1 — 2026-10-19: in the banner, an "Open the current configuration in FrequencyLaboratory" link (the current state in the `#state=` fragment, new tab; no network requests).
 - 2.1.0 — 2026-10-14: Backup and data labelling (fff-kit).

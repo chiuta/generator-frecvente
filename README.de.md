@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 2.2.1 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 2.2.2 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,9 @@ Per Audit überprüft: Die Seite sendet keine Netzwerkanfragen (es gibt kein `fe
 Das Verhalten hängt vom Browser ab (Web Audio, MIDI, AudioWorklet). Im selben Portfolio gibt es eine neuere Version des Werkzeugs: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (der Link erscheint auch im Banner der Seite).
 
 ## Verlauf / Changelog
+
+### 2.2.2 — 2026-10-22
+- Der Panel-Titel „Design · Teilen“ ist jetzt auch auf Rumänisch übersetzt („partajare“).
 
 - 2.1.1 — 2026-10-19: Im Banner ein Link „Aktuelle Konfiguration in FrequencyLaboratory öffnen“ (der aktuelle Zustand im Fragment `#state=`, neuer Tab; keine Netzwerkanfragen).
 - 2.1.0 — 2026-10-14: Datensicherung und Datenkennzeichnung (fff-kit).
