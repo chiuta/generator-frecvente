@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "slug": "generator-frecvente",
-  "name": "Laborator de Frecvențe v2.1.0 — Generator Audio Complet",
-  "version": "2.2.3",
+  "name": "Laborator de Frecvențe — Generator Audio Complet",
+  "version": "2.2.4",
   "updated": "2026-10-22",
   "description": "Generator de frecvențe v2.0: multi-band compressor (3 benzi), vocoder 8-band, MIDI CC learn, drum machine 4 voci × 16 pași, beat detection din mic, audiogram export JSON/CSV, freq interval calculator, spectral freeze. Plus toate funcțiile v1.9.",
   "egress": [],
@@ -14,15 +14,15 @@
     "localStorage"
   ],
   "storageKeys": [
-    "lab_frecv_favorites_v1",
-    "lab_frecv_lang",
-    "lab_frecv_midi_mappings",
-    "lab_frecv_presets_v1",
-    "lab_frecv_theme",
-    "lab_frecv_tutorial_seen"
+    "generator-frecvente.favorites_v1",
+    "generator-frecvente.lang",
+    "generator-frecvente.midi_mappings",
+    "generator-frecvente.presets_v1",
+    "generator-frecvente.theme",
+    "generator-frecvente.tutorial_seen"
   ],
-  "sizeBytes": 1130373,
-  "sha256": "0b27125dfe659329e890821180cd212326c52192e8865655961c547879b0ad7f",
+  "sizeBytes": 1134532,
+  "sha256": "233bbfbb5673944952ec0b0125958a4a7f57bbae2ebb7016a2739130bdee685a",
   "csp": {
     "present": true,
     "directives": {
@@ -35,7 +35,7 @@
       "base-uri": "'self'",
       "form-action": "'self'",
       "worker-src": "'self' blob:",
-      "script-src": "'self' blob: sha256×5",
+      "script-src": "'self' blob: sha256×6",
       "connect-src": "'self'",
       "manifest-src": "'self'"
     },
@@ -45,7 +45,16 @@
   "features": {
     "export": true,
     "import": true,
-    "i18n": [],
+    "i18n": [
+      "ro",
+      "en",
+      "fr",
+      "it",
+      "es",
+      "pt",
+      "hu",
+      "de"
+    ],
     "pwa": {
       "manifest": true,
       "serviceWorker": true

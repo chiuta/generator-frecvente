@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 2.2.3 · **Dernière mise à jour :** 2026-10-22
+**Version :** 2.2.4 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,10 @@ Vérifié par audit : la page n'effectue aucune requête réseau (pas de `fetch`
 Le comportement dépend du navigateur (Web Audio, MIDI, AudioWorklet). Une version plus récente de l'outil existe dans le même portefeuille : [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (le lien figure aussi dans la bannière de la page).
 
 ## Historique / Changelog
+
+### 2.2.4 — 2026-10-22
+
+clés `localStorage` propres avec le préfixe `generator-frecvente.`, migrées automatiquement depuis les anciennes clés `lab_frecv_` (qui entraient en collision avec FrequencyLaboratory sur la même origine : préréglages et thème s’écrasaient mutuellement) ; l’étiquette technique liste désormais les 8 langues de l’interface ; les champs de fichier cachés sont étiquetés dans chaque langue ; focus clavier visible ; le lien de la bannière passe à la ligne sur les écrans étroits. finitions mobile et accessibilité : texte d’au moins 12 px et cibles tactiles d’au moins 24 px.
 
 ### 2.2.3 — 2026-10-22
 - Environ 50 attributs aria-label/title restés en anglais (y compris en roumain) sont traduits dans les 8 langues ; les noms d'étapes par défaut (« Étape 1/4 ») suivent la langue de l'interface et se mettent à jour en direct.

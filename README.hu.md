@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 2.2.3 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 2.2.4 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,10 @@ Auditálással ellenőrizve: az oldal nem küld hálózati kéréseket (nincs `f
 A működés a böngészőtől függ (Web Audio, MIDI, AudioWorklet). Az eszköz újabb változata létezik ugyanebben a portfólióban: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (a hivatkozás az oldal bannerében is megjelenik).
 
 ## Előzmények / Changelog
+
+### 2.2.4 — 2026-10-22
+
+saját `localStorage` kulcsok `generator-frecvente.` előtaggal, a régi `lab_frecv_` kulcsokból automatikusan átemelve (amelyek ugyanazon az origin-en ütköztek a FrequencyLaboratoryval: az előbeállítások és a téma felülírták egymást); a műszaki címke most felsorolja a felület 8 nyelvét; a rejtett fájlmezők minden nyelven fel vannak címkézve; látható billentyűzetfókusz; a szalag hivatkozása keskeny képernyőn tördelődik. mobil és kisegítő finomítások: legalább 12 px-es szöveg és legalább 24 px-es érintési felületek.
 
 ### 2.2.3 — 2026-10-22
 - Mintegy 50, angolul maradt aria-label/title attribútum (románul is) mind a 8 nyelven le van fordítva; az alapértelmezett szakaszelnevezések („1/4. szakasz”) követik a felület nyelvét, és nyelvváltáskor azonnal frissülnek.

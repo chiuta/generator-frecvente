@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.2.3 · **Ultima actualizare:** 2026-10-22
+**Versiune:** 2.2.4 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,10 @@ Verificat prin audit: pagina nu face cereri de rețea (nu există `fetch`, CDN s
 Comportamentul depinde de browser (Web Audio, MIDI, AudioWorklet). Există o versiune mai nouă a instrumentului în același portofoliu: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (linkul apare și în bannerul din pagină).
 
 ## Istoric / Changelog
+
+### 2.2.4 — 2026-10-22
+
+chei `localStorage` proprii cu prefixul `generator-frecvente.`, migrate automat din vechile chei `lab_frecv_` (care intrau în coliziune cu FrequencyLaboratory pe aceeași origine: presetările și tema se suprascriau reciproc); eticheta tehnică listează acum cele 8 limbi ale interfeței; câmpurile ascunse pentru fișiere au etichetă în toate limbile; focus de tastatură vizibil; linkul din banner trece pe rând nou pe ecrane înguste. finisaje pentru mobil și accesibilitate: text de cel puțin 12 px și ținte tactile de cel puțin 24 px.
 
 ### 2.2.3 — 2026-10-22
 - Circa 50 de atribute aria-label/title rămase în engleză (inclusiv în română) sunt traduse în toate cele 8 limbi; numele implicite ale etapelor („Etapa 1/4”) urmează limba interfeței și se actualizează imediat la schimbarea ei.
