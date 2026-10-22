@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 2.2.5 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 2.2.6 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,9 @@ Auditálással ellenőrizve: az oldal nem küld hálózati kéréseket (nincs `f
 A működés a böngészőtől függ (Web Audio, MIDI, AudioWorklet). Az eszköz újabb változata létezik ugyanebben a portfólióban: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (a hivatkozás az oldal bannerében is megjelenik).
 
 ## Előzmények / Changelog
+
+### 2.2.6 — 2026-10-22
+- fff-kit 1.1.4: érintési célpontok és minimális szövegméret; érintési célpontok/szöveg javítva
 
 ### 2.2.5 — 2026-10-22
 - fff-kit 1.1.2: PBKDF2 600 000 iterációval, clickjacking elleni védelem.

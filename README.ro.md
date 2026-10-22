@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.2.5 · **Ultima actualizare:** 2026-10-22
+**Versiune:** 2.2.6 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,9 @@ Verificat prin audit: pagina nu face cereri de rețea (nu există `fetch`, CDN s
 Comportamentul depinde de browser (Web Audio, MIDI, AudioWorklet). Există o versiune mai nouă a instrumentului în același portofoliu: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (linkul apare și în bannerul din pagină).
 
 ## Istoric / Changelog
+
+### 2.2.6 — 2026-10-22
+- fff-kit 1.1.4: ținte tactile și text minim; ținte tactile/text corectate
 
 ### 2.2.5 — 2026-10-22
 - fff-kit 1.1.2: PBKDF2 600 000 de iterații, protecție anti-clickjacking.

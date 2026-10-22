@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 2.2.5 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 2.2.6 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,9 @@ Per Audit überprüft: Die Seite sendet keine Netzwerkanfragen (es gibt kein `fe
 Das Verhalten hängt vom Browser ab (Web Audio, MIDI, AudioWorklet). Im selben Portfolio gibt es eine neuere Version des Werkzeugs: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (der Link erscheint auch im Banner der Seite).
 
 ## Verlauf / Changelog
+
+### 2.2.6 — 2026-10-22
+- fff-kit 1.1.4: Touch-Ziele und Mindestschriftgröße; Touch-Ziele/Text korrigiert
 
 ### 2.2.5 — 2026-10-22
 - fff-kit 1.1.2: PBKDF2 mit 600.000 Iterationen, Schutz vor Clickjacking.
