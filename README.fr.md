@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 2.2.6 · **Dernière mise à jour :** 2026-10-22
+**Version :** 2.2.7 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,7 @@ Vérifié par audit : la page n'effectue aucune requête réseau (pas de `fetch`
 Le comportement dépend du navigateur (Web Audio, MIDI, AudioWorklet). Une version plus récente de l'outil existe dans le même portefeuille : [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (le lien figure aussi dans la bannière de la page).
 
 ## Historique / Changelog
+- **2.2.7 — 2026-10-22:** Cibles tactiles : la case « afficher les harmoniques sur le spectre » est dans une étiquette d’au moins 24 px de haut. Nouvel audit à 360 et 1366 px (état initial, sections développées, panneaux cachés) : plus aucune cible sous 24 px ni texte sous 12 px.
 
 ### 2.2.6 — 2026-10-22
 - fff-kit 1.1.4 : cibles tactiles et taille de texte minimale; cibles tactiles/texte corrigés

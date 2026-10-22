@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 2.2.6 · **Última actualización:** 2026-10-22
+**Versión:** 2.2.7 · **Última actualización:** 2026-10-22
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,7 @@ Verificado mediante auditoría: la página no realiza solicitudes de red (no hay
 El comportamiento depende del navegador (Web Audio, MIDI, AudioWorklet). Existe una versión más reciente de la herramienta en el mismo portafolio: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (el enlace aparece también en el banner de la página).
 
 ## Historial / Changelog
+- **2.2.7 — 2026-10-22:** Objetivos táctiles: la casilla «mostrar armónicos en el espectro» está en una etiqueta de al menos 24 px de alto. Nueva auditoría a 360 y 1366 px (estado inicial, secciones expandidas, paneles ocultos): no queda ningún objetivo por debajo de 24 px ni texto por debajo de 12 px.
 
 ### 2.2.6 — 2026-10-22
 - fff-kit 1.1.4: objetivos táctiles y texto mínimo; objetivos táctiles/texto corregidos

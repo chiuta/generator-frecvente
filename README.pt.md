@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 2.2.6 · **Última atualização:** 2026-10-22
+**Versão:** 2.2.7 · **Última atualização:** 2026-10-22
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,7 @@ Verificado por auditoria: a página não faz pedidos de rede (não existem `fetc
 O comportamento depende do navegador (Web Audio, MIDI, AudioWorklet). Existe uma versão mais recente da ferramenta no mesmo portefólio: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (a ligação aparece também no banner da página).
 
 ## Histórico / Changelog
+- **2.2.7 — 2026-10-22:** Alvos táteis: a caixa «mostrar harmónicos no espectro» fica numa etiqueta com pelo menos 24 px de altura. Nova auditoria a 360 e 1366 px (estado inicial, secções expandidas, painéis ocultos): não resta nenhum alvo abaixo de 24 px nem texto abaixo de 12 px.
 
 ### 2.2.6 — 2026-10-22
 - fff-kit 1.1.4: alvos táteis e texto mínimo; alvos táteis/texto corrigidos

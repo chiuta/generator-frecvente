@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.2.6 · **Last updated:** 2026-10-22
+**Version:** 2.2.7 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,7 @@ Verified by audit: the page makes no network requests (there is no `fetch`, CDN 
 Behaviour depends on the browser (Web Audio, MIDI, AudioWorklet). A newer version of the tool exists in the same portfolio: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (the link also appears in the banner on the page).
 
 ## History / Changelog
+- **2.2.7 — 2026-10-22:** Touch targets: the “show harmonics on spectrum” checkbox sits in a label at least 24 px high. Re-audit at 360 and 1366 px (initial state, expanded sections, hidden panels): no target under 24 px and no text under 12 px remains.
 
 ### 2.2.6 — 2026-10-22
 - fff-kit 1.1.4: touch targets and minimum text size; touch targets/text fixed
