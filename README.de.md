@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 2.2.2 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 2.2.3 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,9 @@ Per Audit überprüft: Die Seite sendet keine Netzwerkanfragen (es gibt kein `fe
 Das Verhalten hängt vom Browser ab (Web Audio, MIDI, AudioWorklet). Im selben Portfolio gibt es eine neuere Version des Werkzeugs: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (der Link erscheint auch im Banner der Seite).
 
 ## Verlauf / Changelog
+
+### 2.2.3 — 2026-10-22
+- Rund 50 aria-label/title-Attribute, die auf Englisch geblieben waren (auch im Rumänischen), sind in allen 8 Sprachen übersetzt; die Standardnamen der Phasen („Phase 1/4“) folgen der Oberflächensprache und werden sofort aktualisiert.
 
 ### 2.2.2 — 2026-10-22
 - Der Panel-Titel „Design · Teilen“ ist jetzt auch auf Rumänisch übersetzt („partajare“).

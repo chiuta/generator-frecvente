@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 2.2.2 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 2.2.3 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,9 @@ Auditálással ellenőrizve: az oldal nem küld hálózati kéréseket (nincs `f
 A működés a böngészőtől függ (Web Audio, MIDI, AudioWorklet). Az eszköz újabb változata létezik ugyanebben a portfólióban: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (a hivatkozás az oldal bannerében is megjelenik).
 
 ## Előzmények / Changelog
+
+### 2.2.3 — 2026-10-22
+- Mintegy 50, angolul maradt aria-label/title attribútum (románul is) mind a 8 nyelven le van fordítva; az alapértelmezett szakaszelnevezések („1/4. szakasz”) követik a felület nyelvét, és nyelvváltáskor azonnal frissülnek.
 
 ### 2.2.2 — 2026-10-22
 - A „téma · megosztás” panelcím mostantól románul is le van fordítva („partajare”).
