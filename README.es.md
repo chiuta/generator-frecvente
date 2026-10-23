@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 2.2.9 · **Última actualización:** 2026-10-23
+**Versión:** 2.2.10 · **Última actualización:** 2026-10-23
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,7 @@ Verificado mediante auditoría: la página no realiza solicitudes de red (no hay
 El comportamiento depende del navegador (Web Audio, MIDI, AudioWorklet). Existe una versión más reciente de la herramienta en el mismo portafolio: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (el enlace aparece también en el banner de la página).
 
 ## Historial / Changelog
+- **2.2.10 — 2026-10-23:** **fix**: saved and imported presets are now validated (only known keys, correct type, values limited to the controls’ ranges, at most 200 entries): a preset file with `master: 500` or text in a numeric field can no longer drive the volume past 100 % or break the presets list
 - **2.2.9 — 2026-10-23:** fff-kit 1.2.0: han desaparecido las últimas llamadas nativas a `alert`/`confirm`/`prompt`: los mensajes aparecen como notificaciones accesibles (aria-live, en el idioma de la interfaz) y borrar un favorito con una pulsación larga pide confirmación en el diálogo `FFF.dialog` del kit. Las etiquetas «Mode m / Mode n» están ahora traducidas a los 8 idiomas.
 - **2.2.7 — 2026-10-22:** Objetivos táctiles: la casilla «mostrar armónicos en el espectro» está en una etiqueta de al menos 24 px de alto. Nueva auditoría a 360 y 1366 px (estado inicial, secciones expandidas, paneles ocultos): no queda ningún objetivo por debajo de 24 px ni texto por debajo de 12 px.
 
