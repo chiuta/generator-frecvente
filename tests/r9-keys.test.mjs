@@ -72,5 +72,30 @@ for (const L of ['en', 'ro', 'fr', 'it', 'es', 'pt', 'de', 'hu']) {
   t('repornire offline', await p.evaluate(() => !!document.getElementById('app-version')) && errs.length === 0, errs);
   await ctx.close();
 }
+// 4. presetări ostile: tip/interval validate (2.2.10)
+{
+  const ctx = await b.newContext({viewport: {width: 1280, height: 800}});
+  await ctx.addInitScript(() => { try {
+    localStorage.setItem('generator-frecvente.tutorial_seen', '1');
+    localStorage.setItem('generator-frecvente.presets_v1', JSON.stringify([
+      {name: 'Ostil', timestamp: 'x', state: {master: 500, gainA: 1e6, freqA: 'abc', freqB: -5, binaural: true, beatRate: 'zz', waveA: 'constructor', filterType: '<img>', __proto__: {polluted: 1}, extra: 7}},
+      {name: 7, state: {}}, {name: 'fără stare'}, 'text', null,
+      {name: 'Bun', timestamp: 1700000000000, state: {freqA: 528, master: 0.2}}
+    ]));
+  } catch (e) {} });
+  const p = await ctx.newPage(); const errs = [];
+  p.on('pageerror', (e) => errs.push(e.message));
+  await p.goto(BASE); await p.waitForTimeout(1500);
+  t('presetări ostile în localStorage: 0 erori la pornire', errs.length === 0, errs);
+  const names = await p.evaluate(() => Array.from(document.querySelectorAll('#userPresetsList .nm')).map((e) => e.textContent));
+  t('doar intrările valide rămân (Ostil, Bun)', names.join('|') === 'Ostil|Bun', names);
+  await p.locator('#userPresetsList button[data-load]').first().click();
+  const st = await p.evaluate(() => ({m: state.master, g: state.gainA, fa: state.freqA, fb: state.freqB, wa: state.waveA, ft: state.filterType, ex: state.extra, pol: ({}).polluted, proto: Object.getPrototypeOf(state) === Object.prototype}));
+  t('valorile numerice sunt limitate la intervalul controalelor (master ≤ 1, gainA ≤ 1)', st.m === 1 && st.g === 1, st);
+  t('frecvența invalidă rămâne cea curentă, cea negativă urcă la minim', st.fa === 440 && st.fb === 1, st);
+  t('enumuri necunoscute și chei străine ignorate, prototipul neschimbat', st.wa === 'sine' && st.ft === 'off' && st.ex === undefined && st.pol === undefined && st.proto, st);
+  t('încărcarea presetării: 0 erori', errs.length === 0, errs);
+  await ctx.close();
+}
 await b.close(); srv.close();
 console.log('\n' + ok + ' reușite, ' + bad + ' eșuate'); process.exit(bad ? 1 : 0);

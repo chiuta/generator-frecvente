@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.2.9 · **Ultima actualizare:** 2026-10-23
+**Versiune:** 2.2.10 · **Ultima actualizare:** 2026-10-23
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,7 @@ Verificat prin audit: pagina nu face cereri de rețea (nu există `fetch`, CDN s
 Comportamentul depinde de browser (Web Audio, MIDI, AudioWorklet). Există o versiune mai nouă a instrumentului în același portofoliu: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (linkul apare și în bannerul din pagină).
 
 ## Istoric / Changelog
+- **2.2.10 — 2026-10-23:** **corecție**: presetările salvate și cele importate sunt acum validate (doar chei cunoscute, tip corect, valori limitate la intervalul controalelor, cel mult 200 de intrări): un fișier de presetări cu `master: 500` sau text într-un câmp numeric nu mai poate duce volumul peste 100 % și nu mai strică lista de presetări
 - **2.2.9 — 2026-10-23:** fff-kit 1.2.0: ultimele apeluri native `alert`/`confirm`/`prompt` au dispărut: mesajele apar ca notificări accesibile (aria-live, în limba interfeței), iar ștergerea unui favorit prin apăsare lungă cere confirmarea în dialogul `FFF.dialog` al kitului. Etichetele „Mode m / Mode n” sunt acum traduse în toate cele 8 limbi.
 - **2.2.7 — 2026-10-22:** Ținte tactile: caseta „arată armonice pe spectrum” stă într-o etichetă de cel puțin 24 px înălțime. Re-audit la 360 și 1366 px (stare inițială, secțiuni extinse, panouri ascunse): nu mai rămâne nicio țintă sub 24 px și niciun text sub 12 px.
 

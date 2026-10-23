@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 2.2.9 · **Ultimo aggiornamento:** 2026-10-23
+**Versione:** 2.2.10 · **Ultimo aggiornamento:** 2026-10-23
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,7 @@ Verificato tramite audit: la pagina non effettua richieste di rete (non ci sono 
 Il comportamento dipende dal browser (Web Audio, MIDI, AudioWorklet). Nello stesso portfolio esiste una versione più recente dello strumento: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (il link compare anche nel banner della pagina).
 
 ## Cronologia / Changelog
+- **2.2.10 — 2026-10-23:** **fix**: saved and imported presets are now validated (only known keys, correct type, values limited to the controls’ ranges, at most 200 entries): a preset file with `master: 500` or text in a numeric field can no longer drive the volume past 100 % or break the presets list
 - **2.2.9 — 2026-10-23:** fff-kit 1.2.0: sono spariti gli ultimi richiami nativi `alert`/`confirm`/`prompt`: i messaggi appaiono come notifiche accessibili (aria-live, nella lingua dell'interfaccia) e l'eliminazione di un preferito con pressione prolungata chiede conferma nel dialogo `FFF.dialog` del kit. Le etichette «Mode m / Mode n» sono ora tradotte in tutte le 8 lingue.
 - **2.2.7 — 2026-10-22:** Bersagli touch: la casella «mostra armoniche sullo spettro» è in un’etichetta alta almeno 24 px. Nuovo audit a 360 e 1366 px (stato iniziale, sezioni espanse, pannelli nascosti): non restano bersagli sotto 24 px né testo sotto 12 px.
 
