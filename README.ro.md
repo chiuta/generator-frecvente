@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.2.10 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 3.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -16,6 +16,13 @@ Instrument audio într-un singur fișier HTML (`index.html`), rulat în browser 
 
 ## Utilizare
 Deschide `index.html` într-un browser modern (sau varianta publicată prin GitHub Pages). Apasă „Start” pentru a porni sunetul; scurtăturile sunt descrise în pagină (tasta `?`).
+
+
+## Novități v3.0.0
+
+- **Bibliotecă de scene**: șase secvențe de etape (bătăi binaurale programate) gata făcute, plus scenele proprii; căutare după nume, bandă (Delta, Theta, Alpha, Beta, Gamma) sau etapă; „Încarcă” / „Rulează” folosesc sesiunile programabile existente.
+- **Salvare și partajare**: salvezi sesiunea curentă ca scenă (localStorage), exporți/imporți pachete JSON (`gf-scenes`), copiezi un cod scurt `GF1.…` și exporți planul sesiunii ca CSV.
+- Informativ și experimental: scenele sunt doar secvențe de frecvențe, nu tratament medical. Nu sunt implementate încă modul de profil auditiv personal și pachetele de presetări din surse externe.
 
 ## Date și confidențialitate
 Verificat prin audit: pagina nu face cereri de rețea (nu există `fetch`, CDN sau fonturi externe; fonturile sunt încorporate). Microfonul este folosit doar dacă îl activezi explicit, iar semnalul este procesat local. Setările pot fi păstrate în `localStorage`. Singurele link-uri externe sunt cele de sprijin voluntar și site-ul autorului.
