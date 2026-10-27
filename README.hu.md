@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 3.0.0 · **Utolsó frissítés:** 2026-10-26
+**Verzió:** 3.1.0 · **Utolsó frissítés:** 2026-10-27
+
+**Állapot:** stabil · **Offline:** teljes
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -23,7 +25,17 @@ Auditálással ellenőrizve: az oldal nem küld hálózati kéréseket (nincs `f
 ## Korlátozások
 A működés a böngészőtől függ (Web Audio, MIDI, AudioWorklet). Az eszköz újabb változata létezik ugyanebben a portfólióban: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (a hivatkozás az oldal bannerében is megjelenik).
 
+## Halláskárosodás elleni védelem és hangerőkorlátozó (3.1.0)
+
+Induláskor megerősítést kérő figyelmeztetés jelenik meg („Értem — hang bekapcsolása”): addig a hangkimenet néma. Beépített **hangerőkorlátozó** (felső határ a hangszórókra/fejhallgatóra küldött teljes hangra, a hallásvizsgálatot is beleértve): alapértelmezés −6 dB, −30 dB és 0 dB között állítható a fejléc „KORLÁT … dB” jelvényén; a korlát a `localStorage`-ban marad (`generator-frecvente.volcap`), a megerősítés csak a munkamenetre érvényes. A „Master” hangerő a korláton belül marad; a felvett (WAV) fájlokat nem érinti. Nem orvostechnikai eszköz: a készülék hangerejét kezdetben a minimumra állítsd.
+
+## Lásd még: FrequencyLaboratory
+
+A **Frequency Laboratory (generator-frecvente)** (ez az alkalmazás) és a **FrequencyLaboratory** közös kódalapról indul, és erősen átfedik egymást. A FrequencyLaboratory az újabb, teljesebb változat; ez a klasszikus egypaneles felületet őrzi, és hozzáadja a jelenettárat. A két alkalmazást NEM vontuk össze; külön tárolókulcsokat használnak, és hivatkozással (`#state=`) átadhatják egymásnak a beállítást.
+
 ## Előzmények / Changelog
+
+- **3.1.0 — 2026-10-27:** hallásvédelmi figyelmeztetés megerősítéssel az első hang előtt + hangerőkorlátozó (felső határ, alapértelmezés −6 dB, állítható); „lásd még” megjegyzés a FrequencyLaboratory-hoz; Állapot/Offline sorok; CHANGELOG.md (előző: v3.0.0).
 - **2.2.9 — 2026-10-23:** fff-kit 1.2.0: megszűntek az utolsó natív `alert`/`confirm`/`prompt` hívások: az üzenetek akadálymentes értesítésként (aria-live, a felület nyelvén) jelennek meg, egy kedvenc hosszú nyomással történő törlése pedig a készlet `FFF.dialog` párbeszédablakában kér megerősítést. A „Mode m / Mode n” címkék most mind a 8 nyelven le vannak fordítva.
 - **2.2.7 — 2026-10-22:** Érintési célpontok: a „felharmonikusok mutatása a spektrumon” jelölőnégyzet legalább 24 px magas címkében van. Újabb ellenőrzés 360 és 1366 px-en (kezdőállapot, kinyitott szakaszok, rejtett panelek): nem marad 24 px alatti célpont és 12 px alatti szöveg.
 

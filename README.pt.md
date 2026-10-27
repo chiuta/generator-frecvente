@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 3.0.0 · **Última atualização:** 2026-10-26
+**Versão:** 3.1.0 · **Última atualização:** 2026-10-27
+
+**Estado:** estável · **Offline:** completo
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -23,7 +25,17 @@ Verificado por auditoria: a página não faz pedidos de rede (não existem `fetc
 ## Limitações
 O comportamento depende do navegador (Web Audio, MIDI, AudioWorklet). Existe uma versão mais recente da ferramenta no mesmo portefólio: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (a ligação aparece também no banner da página).
 
+## Proteção auditiva e limitador de volume (3.1.0)
+
+Ao iniciar aparece um aviso com confirmação («Compreendi — ativar o som»): até lá a saída de áudio fica muda. Inclui um **limitador de volume** (teto para todo o som enviado às colunas/auscultadores, incluindo o teste auditivo): −6 dB por predefinição, ajustável de −30 dB a 0 dB na etiqueta «LIMITE … dB» do cabeçalho; o limite fica em `localStorage` (`generator-frecvente.volcap`) e a confirmação só durante a sessão. O volume «Master» fica dentro do limite; os ficheiros gravados (WAV) não são afetados. Não é um dispositivo médico: comece com o volume do dispositivo no mínimo.
+
+## Ver também: FrequencyLaboratory
+
+**Frequency Laboratory (generator-frecvente)** (esta aplicação) e **FrequencyLaboratory** partilham a base de código e sobrepõem-se muito. FrequencyLaboratory é a versão mais recente e completa; esta mantém a interface clássica de um só painel e acrescenta a biblioteca de cenas. As duas aplicações NÃO foram fundidas; usam chaves de armazenamento separadas e podem trocar a configuração através de uma ligação (`#state=`).
+
 ## Histórico / Changelog
+
+- **3.1.0 — 2026-10-27:** aviso de proteção auditiva com confirmação antes do primeiro som + limitador de volume (teto, −6 dB predefinido, ajustável); nota «ver também» FrequencyLaboratory; linhas Estado/Offline; CHANGELOG.md (anterior: v3.0.0).
 - **2.2.9 — 2026-10-23:** fff-kit 1.2.0: desapareceram as últimas chamadas nativas a `alert`/`confirm`/`prompt`: as mensagens surgem como notificações acessíveis (aria-live, no idioma da interface) e apagar um favorito com um toque longo pede confirmação no diálogo `FFF.dialog` do kit. As etiquetas «Mode m / Mode n» estão agora traduzidas nos 8 idiomas.
 - **2.2.7 — 2026-10-22:** Alvos táteis: a caixa «mostrar harmónicos no espectro» fica numa etiqueta com pelo menos 24 px de altura. Nova auditoria a 360 e 1366 px (estado inicial, secções expandidas, painéis ocultos): não resta nenhum alvo abaixo de 24 px nem texto abaixo de 12 px.
 

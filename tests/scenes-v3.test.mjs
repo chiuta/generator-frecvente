@@ -1,4 +1,4 @@
-// Teste v3.0.0 pentru Generator de frecvențe: bibliotecă de scene (căutare, salvare, încărcare în sesiuni, export/import, cod de partajare, plan CSV).
+// Teste v3.1.0 pentru Generator de frecvențe: bibliotecă de scene (căutare, salvare, încărcare în sesiuni, export/import, cod de partajare, plan CSV).
 // Rulare: node tests/scenes-v3.test.mjs   (Playwright din /opt/node-tools, rețea blocată). Testează logica, nu sunetul.
 import {createRequire} from 'module';
 import path from 'path';
@@ -12,7 +12,7 @@ function t(name, cond, extra) { if (cond) { ok++; console.log('  ok  ' + name); 
 const b = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || undefined, args: ['--no-sandbox']});
 async function open(lang = 'ro') {
   const ctx = await b.newContext({viewport: {width: 1280, height: 900}, acceptDownloads: true, serviceWorkers: 'block'});
-  await ctx.addInitScript((l) => { try { localStorage.setItem('generator-frecvente.tutorial_seen', '1'); if (l) localStorage.setItem('generator-frecvente.lang', l); } catch (e) {} }, lang);
+  await ctx.addInitScript((l) => { try { sessionStorage.setItem('generator-frecvente.hpack', '1'); localStorage.setItem('generator-frecvente.tutorial_seen', '1'); if (l) localStorage.setItem('generator-frecvente.lang', l); } catch (e) {} }, lang);
   let net = 0; await ctx.route(/^https?:/, (r) => { net++; r.abort(); });
   const p = await ctx.newPage(); const errs = [];
   p.on('pageerror', (e) => errs.push(e.message));

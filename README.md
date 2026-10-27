@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 3.0.0 · **Last updated:** 2026-10-26
+**Version:** 3.1.0 · **Last updated:** 2026-10-27
+
+**Status:** stable · **Offline:** complete
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -23,7 +25,17 @@ Verified by audit: the page makes no network requests (there is no `fetch`, CDN 
 ## Limitations
 Behaviour depends on the browser (Web Audio, MIDI, AudioWorklet). A newer version of the tool exists in the same portfolio: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (the link also appears in the banner on the page).
 
+## Hearing protection and volume limiter (3.1.0)
+
+A warning with confirmation (“I understand — enable sound”) appears at start-up: until then the audio output is muted. A **volume limiter** (a ceiling for all sound sent to speakers/headphones, including the hearing test) is built in: −6 dB by default, adjustable from −30 dB to 0 dB from the “LIMIT … dB” pill in the header; the limit is kept in `localStorage` (`generator-frecvente.volcap`) and the confirmation only for the session. The “Master” volume stays within the limit; recorded files (WAV) are not affected. It is not a medical device and does not guarantee hearing safety: start with the device volume at minimum.
+
+## See also: FrequencyLaboratory
+
+**Frequency Laboratory (generator-frecvente)** (this app) and **FrequencyLaboratory** share a code base and overlap a lot. FrequencyLaboratory is the newer, more complete version (modular system, profiles, more analysis tools); this app keeps the classic single-panel interface and adds the scene library (sequences of binaural stages). The two apps have NOT been merged; they use separate storage keys (own prefix) and can pass a configuration to each other through a link (`#state=`). Pick FrequencyLaboratory for the full feature set and this one for scenes and a simpler layout.
+
 ## History / Changelog
+
+- **3.1.0 — 2026-10-27:** hearing-protection warning with confirmation before the first sound + volume limiter (ceiling, −6 dB default, adjustable); “see also” note for FrequencyLaboratory; Status/Offline lines; CHANGELOG.md (previous: v3.0.0).
 - **2.2.9 — 2026-10-23:** fff-kit 1.2.0: the last native `alert`/`confirm`/`prompt` calls are gone: messages appear as accessible notifications (aria-live, in the interface language) and deleting a favourite by long press asks for confirmation in the kit's `FFF.dialog` dialog. The “Mode m / Mode n” labels are now translated in all 8 languages.
 - **2.2.7 — 2026-10-22:** Touch targets: the “show harmonics on spectrum” checkbox sits in a label at least 24 px high. Re-audit at 360 and 1366 px (initial state, expanded sections, hidden panels): no target under 24 px and no text under 12 px remains.
 

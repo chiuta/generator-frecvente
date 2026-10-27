@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 3.0.0 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 3.1.0 · **Ultima actualizare:** 2026-10-27
+
+**Stare:** stabil · **Offline:** complet
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -30,7 +32,17 @@ Verificat prin audit: pagina nu face cereri de rețea (nu există `fetch`, CDN s
 ## Limitări
 Comportamentul depinde de browser (Web Audio, MIDI, AudioWorklet). Există o versiune mai nouă a instrumentului în același portofoliu: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (linkul apare și în bannerul din pagină).
 
+## Protecția auzului și limitator de volum (3.1.0)
+
+La pornire apare o avertizare cu confirmare („Am înțeles — activează sunetul”): până atunci ieșirea audio este mută. Există un **limitator de volum** (plafon pentru tot sunetul trimis la difuzoare/căști, inclusiv testul auditiv): implicit −6 dB, reglabil de la −30 dB la 0 dB din pastila „LIMITĂ … dB” din antet; limita se păstrează în `localStorage` (`generator-frecvente.volcap`), iar confirmarea doar pe sesiune. Volumul „Master” rămâne în interiorul limitei; fișierele înregistrate (WAV) nu sunt afectate. Nu este dispozitiv medical și nu garantează siguranța auzului: începe cu volumul dispozitivului la minim.
+
+## Vezi și: FrequencyLaboratory
+
+**Generator de frecvențe** (această aplicație) și **FrequencyLaboratory** pornesc din aceeași bază de cod și se suprapun mult. FrequencyLaboratory este versiunea mai nouă și mai completă (sistem modular, profiluri, mai multe instrumente de analiză); Generator de frecvențe păstrează interfața clasică într-un singur panou și adaugă biblioteca de scene (secvențe de etape binaurale). Cele două aplicații NU au fost fuzionate; au chei de stocare separate (prefix propriu) și își pot transfera configurația printr-un link (`#state=`). Alege FrequencyLaboratory pentru funcții complete și acesta pentru scene și o interfață mai simplă.
+
 ## Istoric / Changelog
+
+- **3.1.0 — 2026-10-27:** avertizare de protecție a auzului cu confirmare înainte de primul sunet + limitator de volum (plafon, −6 dB implicit, reglabil); notă „vezi și” FrequencyLaboratory; linii Stare/Offline; CHANGELOG.md (anterior: v3.0.0).
 - **2.2.9 — 2026-10-23:** fff-kit 1.2.0: ultimele apeluri native `alert`/`confirm`/`prompt` au dispărut: mesajele apar ca notificări accesibile (aria-live, în limba interfeței), iar ștergerea unui favorit prin apăsare lungă cere confirmarea în dialogul `FFF.dialog` al kitului. Etichetele „Mode m / Mode n” sunt acum traduse în toate cele 8 limbi.
 - **2.2.7 — 2026-10-22:** Ținte tactile: caseta „arată armonice pe spectrum” stă într-o etichetă de cel puțin 24 px înălțime. Re-audit la 360 și 1366 px (stare inițială, secțiuni extinse, panouri ascunse): nu mai rămâne nicio țintă sub 24 px și niciun text sub 12 px.
 
