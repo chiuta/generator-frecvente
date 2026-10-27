@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 3.0.0 · **Zuletzt aktualisiert:** 2026-10-26
+**Version:** 3.1.0 · **Zuletzt aktualisiert:** 2026-10-27
+
+**Status:** stabil · **Offline:** vollständig
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -23,7 +25,17 @@ Per Audit überprüft: Die Seite sendet keine Netzwerkanfragen (es gibt kein `fe
 ## Einschränkungen
 Das Verhalten hängt vom Browser ab (Web Audio, MIDI, AudioWorklet). Im selben Portfolio gibt es eine neuere Version des Werkzeugs: [FrequencyLaboratory](https://chiuta.github.io/FrequencyLaboratory/) (der Link erscheint auch im Banner der Seite).
 
+## Gehörschutz und Lautstärkebegrenzer (3.1.0)
+
+Beim Start erscheint ein Hinweis mit Bestätigung („Verstanden — Ton aktivieren“): bis dahin ist die Audioausgabe stumm. Ein **Lautstärkebegrenzer** (Obergrenze für den gesamten Ton an Lautsprecher/Kopfhörer, auch für den Hörtest) ist eingebaut: standardmäßig −6 dB, einstellbar von −30 dB bis 0 dB über das Feld „GRENZE … dB“ im Kopfbereich; die Grenze wird in `localStorage` (`generator-frecvente.volcap`) gespeichert, die Bestätigung nur für die Sitzung. Die „Master“-Lautstärke bleibt innerhalb der Grenze; aufgenommene Dateien (WAV) sind nicht betroffen. Kein Medizinprodukt: beginne mit minimaler Gerätelautstärke.
+
+## Siehe auch: FrequencyLaboratory
+
+**Frequency Laboratory (generator-frecvente)** (diese App) und **FrequencyLaboratory** teilen sich eine Codebasis und überschneiden sich stark. FrequencyLaboratory ist die neuere, vollständigere Version; diese behält die klassische Einzelpanel-Oberfläche und ergänzt die Szenenbibliothek. Die beiden Apps wurden NICHT zusammengeführt; sie nutzen getrennte Speicherschlüssel und können eine Konfiguration per Link (`#state=`) übergeben.
+
 ## Verlauf / Changelog
+
+- **3.1.0 — 2026-10-27:** Gehörschutz-Hinweis mit Bestätigung vor dem ersten Ton + Lautstärkebegrenzer (Obergrenze, Standard −6 dB, einstellbar); Hinweis „Siehe auch“ FrequencyLaboratory; Zeilen Status/Offline; CHANGELOG.md (vorher: v3.0.0).
 - **2.2.9 — 2026-10-23:** fff-kit 1.2.0: Die letzten nativen Aufrufe von `alert`/`confirm`/`prompt` entfallen: Meldungen erscheinen als barrierefreie Benachrichtigungen (aria-live, in der Oberflächensprache), und das Löschen eines Favoriten per langem Druck fragt im `FFF.dialog`-Dialog des Kits nach. Die Bezeichnungen „Mode m / Mode n“ sind jetzt in allen 8 Sprachen übersetzt.
 - **2.2.7 — 2026-10-22:** Touch-Ziele: das Kontrollkästchen „Harmonische im Spektrum zeigen“ liegt in einem Label von mindestens 24 px Höhe. Erneute Prüfung bei 360 und 1366 px (Anfangszustand, aufgeklappte Abschnitte, verborgene Panels): kein Ziel unter 24 px und kein Text unter 12 px mehr.
 
