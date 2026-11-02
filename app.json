@@ -22,8 +22,8 @@
     "generator-frecvente.theme",
     "generator-frecvente.tutorial_seen"
   ],
-  "sizeBytes": 1257644,
-  "sha256": "0a9ee3d6b10aa23f11886d164f653d6452b30d9ea1e42c4b414b6a569fbd11b1",
+  "sizeBytes": 1257687,
+  "sha256": "fb07c977fc87531ef1044c03703aeabee652a540f8b33cd0e84db93d634a56ce",
   "csp": {
     "present": true,
     "directives": {
