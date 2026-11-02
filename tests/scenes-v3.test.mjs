@@ -1,4 +1,4 @@
-// Teste v3.1.0 pentru Generator de frecvențe: bibliotecă de scene (căutare, salvare, încărcare în sesiuni, export/import, cod de partajare, plan CSV).
+// Teste v3.2.0 pentru Generator de frecvențe: bibliotecă de scene (căutare, salvare, încărcare în sesiuni, export/import, cod de partajare, plan CSV).
 // Rulare: node tests/scenes-v3.test.mjs   (Playwright din /opt/node-tools, rețea blocată). Testează logica, nu sunetul.
 import {createRequire} from 'module';
 import path from 'path';
