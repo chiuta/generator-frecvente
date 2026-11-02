@@ -89,6 +89,7 @@ for (const L of ['en', 'ro', 'fr', 'it', 'es', 'pt', 'de', 'hu']) {
   t('presetări ostile în localStorage: 0 erori la pornire', errs.length === 0, errs);
   const names = await p.evaluate(() => Array.from(document.querySelectorAll('#userPresetsList .nm')).map((e) => e.textContent));
   t('doar intrările valide rămân (Ostil, Bun)', names.join('|') === 'Ostil|Bun', names);
+  await p.evaluate(() => { const d = document.getElementById('hpGate'); if (d && d.open) d.close(); });   // dialogul de protecție a auzului nu face parte din acest test
   await p.locator('#userPresetsList button[data-load]').first().click();
   const st = await p.evaluate(() => ({m: state.master, g: state.gainA, fa: state.freqA, fb: state.freqB, wa: state.waveA, ft: state.filterType, ex: state.extra, pol: ({}).polluted, proto: Object.getPrototypeOf(state) === Object.prototype}));
   t('valorile numerice sunt limitate la intervalul controalelor (master ≤ 1, gainA ≤ 1)', st.m === 1 && st.g === 1, st);
