@@ -13,6 +13,7 @@
     "serviceWorker",
     "localStorage",
     "Web Crypto",
+    "WebGL",
     "BroadcastChannel"
   ],
   "storageKeys": [
@@ -24,8 +25,8 @@
     "generator-frecvente.theme",
     "generator-frecvente.tutorial_seen"
   ],
-  "sizeBytes": 1523773,
-  "sha256": "a6880a36e30322f6c161a1f8f0e13375f2a6502e91863b04aea8d0ce39871556",
+  "sizeBytes": 1575830,
+  "sha256": "39f9ed992497cbed292e63dec9a97db4da07b511e08747fb3d6345fbd6d1246a",
   "csp": {
     "present": true,
     "directives": {
@@ -38,7 +39,7 @@
       "base-uri": "'self'",
       "form-action": "'self'",
       "worker-src": "'self' blob:",
-      "script-src": "'self' blob: sha256×11",
+      "script-src": "'self' blob: sha256×12",
       "connect-src": "'self'",
       "manifest-src": "'self'"
     },
