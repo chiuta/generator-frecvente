@@ -2,8 +2,8 @@
   "schema": 1,
   "slug": "generator-frecvente",
   "name": "Laborator de Frecvențe — Generator Audio Complet",
-  "version": "3.3.2",
-  "updated": "2026-11-17",
+  "version": "3.3.3",
+  "updated": "2026-11-20",
   "description": "Generator de frecvențe v2.0: multi-band compressor (3 benzi), vocoder 8-band, MIDI CC learn, drum machine 4 voci × 16 pași, beat detection din mic, audiogram export JSON/CSV, freq interval calculator, spectral freeze. Plus toate funcțiile v1.9.",
   "egress": [],
   "permissions": [
@@ -25,8 +25,8 @@
     "generator-frecvente.theme",
     "generator-frecvente.tutorial_seen"
   ],
-  "sizeBytes": 1703207,
-  "sha256": "1877944d0f83ea2bcfdce8362b58cc8e8a7d5935906d67b7a2ba35fa62c4cb4b",
+  "sizeBytes": 1707518,
+  "sha256": "80fd032a81e0d4788a7b8789f02ee012359f3016138a5fb2d76368ec433ea1d9",
   "csp": {
     "present": true,
     "directives": {
@@ -82,7 +82,7 @@
     ]
   },
   "kit": {
-    "version": "1.8.0",
+    "version": "1.8.1",
     "modules": [
       "core",
       "store",
